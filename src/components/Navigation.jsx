@@ -35,7 +35,7 @@ export default function Navigation() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block text-2xl text-white hover:text-lime-400 transition-colors"
+                className="block text-2xl text-white hover:text-lime-400 hover:translate-x-5 hover:before:block  hover:before:transition-all hover:before:duration-300 transition duration-300 before:absolute before:-translate-x-4 before:translate-y-[1rem] before:hidden before:w-2 before:bg-yellow-400 before:h-2 before:rounded-full before:content['']"
               >
                 {item}
               </button>
