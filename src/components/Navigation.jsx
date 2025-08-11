@@ -14,39 +14,23 @@ export default function Navigation() {
   }
 
   return (
-    <nav className="fixed top-0 right-0 z-50 p-6">
-      <div className="md:hidden">
+    <nav className="fixed top-0 right-0 z-50 p-6 md:p-10">
         <button
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors"
         >
-          <div className="flex flex-col gap-1">
-            <div className="w-5 h-0.5 bg-black"></div>
-            <div className="w-5 h-0.5 bg-black"></div>
-            <div className="w-5 h-0.5 bg-black"></div>
-          </div>
+          <label   className="flex flex-col gap-2 w-8">
+    <input onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="peer hidden" type="checkbox" />
+    <div className="rounded-2xl h-[2px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]" />
+    <div className="rounded-2xl h-[2px] w-full bg-black duration-500 peer-checked:-rotate-45" />
+    <div className="rounded-2xl h-[2px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]" />
+  </label>
+         
         </button>
-      </div>
 
-      {/* Desktop Navigation */}
-      <div className="hidden md:block">
-        <div className="flex flex-col space-y-6 text-right">
-          {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
-            <button
-              key={item}
-              onClick={() => scrollToSection(item.toLowerCase())}
-              className="text-gray-400 hover:text-lime-400 transition-colors"
-            >
-              {item}
-            </button>
-          ))}
-        </div>
-      </div>
-
-      {/* Mobile Menu Overlay */}
-      {mobileMenuOpen && (
-        <div className="md:hidden fixed inset-0 bg-black bg-opacity-95 flex items-center justify-center">
-          <div className="text-center space-y-8">
+{/*  */}
+{mobileMenuOpen && (
+        <div className="fixed inset-0 bg-black/90 bg-opacity-95 flex items-center justify-center -z-40">
+          <div className="text-center space-y-8 ">
             {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
               <button
                 key={item}
