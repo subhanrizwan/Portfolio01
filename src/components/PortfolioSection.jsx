@@ -48,8 +48,6 @@ export default function PortfolioSection() {
     >
       <div className="max-w-7xl mx-auto">
                     <Heading Portfolio={'Code Meets Creativity'}/>
-        {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio</h2> */}
-        {/* <div className="w-16 h-1 bg-yellow-300 mb-12"></div> */}
         {/* Portfolio Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gr">
           {portfolioItems.map((item) => (
@@ -64,7 +62,7 @@ export default function PortfolioSection() {
                 style={{ transition: "transform 6s linear" }}
                 src={item.image || "/placeholder.svg"}
                 alt={`Portfolio item ${item.id}`}
-                className="w-full h-auto transition-transform duration-300 translate-y-[0%] group-hover:translate-y-[-83%]"
+                className="w-[100%] h-auto transition-transform duration-300 group-hover:translate-y-[-80%]"
               />
             </div>
           ))}
