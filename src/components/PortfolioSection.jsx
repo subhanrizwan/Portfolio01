@@ -15,23 +15,27 @@ export default function PortfolioSection() {
     {
       id: 2,
       image: proj2,
+      link:'https://carlyti.com/'
     },
     {
       id: 3,
       image: proj3,
+      link:'https://app.netlify.com/projects/subhan-ecommerce-landing/overview'
     },
     {
       id: 4,
       image: proj4,
+      link:'https://subhan-task.netlify.app/'
     },
     {
       id: 5,
       image: proj5,
+      link:'https://wonfoods.com/'
     },
     {
       id: 6,
       image: proj6,
-
+      link:'https://subhanahmed.netlify.app/'
     },
   ];
 
@@ -48,6 +52,8 @@ export default function PortfolioSection() {
           {portfolioItems.map((item) => (
             <div
               key={item.id}
+              target="_blank"
+              onClick={()=> window.open(item.link)}
               className="group relative overflow-hidden rounded-lg group h-64
               shadow-lg hover:shadow-xl transition-shadow duration-300"
             >
@@ -57,7 +63,6 @@ export default function PortfolioSection() {
                 alt={`Portfolio item ${item.id}`}
                 className="w-full h-auto transition-transform duration-300 translate-y-[0%] group-hover:translate-y-[-83%]"
               />
-              {/* <div className="absolute inset-0 overflow-hidden bg-gray-200 group-hover:opacity-0 bg-opacity-50 opacity-1  transition-opacity duration-300 flex items-center justify-center"></div> */}
             </div>
           ))}
         </div>

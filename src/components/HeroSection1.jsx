@@ -1,6 +1,8 @@
 "use client"
 import { Phone, Email, LocationOn } from "@mui/icons-material"
 import Image from "../assets/images/Subhan.png";
+import { IoLogoWhatsapp } from "react-icons/io";
+import { GrReactjs } from "react-icons/gr";
 
 const Details = {
   welcome: "console.log('Hello Everyone!')",
@@ -26,8 +28,6 @@ export default function HeroSection() {
         className="absolute bottom-10 right-4 md:bottom-20 md:right-20 w-16 h-16 md:w-24 md:h-24 bg-yellow-300/40 rounded-full opacity-60 animate-bounce delay-1000"
         style={{ animationDuration: "3s" }}
       ></div>
-
-      {/* Additional decorative circles for better visual balance */}
       <div className="absolute top-1/2 left-2 md:left-10 w-12 h-12 md:w-20 md:h-20 bg-yellow-500/20 rounded-full opacity-50 animate-bounce"
       style={{animationDuration:'4s'}}></div>
       <div className="absolute top-1/4 right-2 md:right-16 w-8 h-8 md:w-16 md:h-16 bg-yellow-400/25 rounded-full opacity-40 animate-pulse delay-500"></div>
@@ -48,7 +48,7 @@ export default function HeroSection() {
 
             <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               <div className="flex items-center  lg:justify-start gap-3">
-                <Phone className="text-yellow-300 w-4 h-4 md:w-5 md:h-5" />
+                <IoLogoWhatsapp className="text-yellow-300 w-4 h-4 md:w-5 md:h-5" />
                 <span className="text-gray-300 text-sm md:text-base">{Details.phone}</span>
               </div>
               <div className="flex items-center  lg:justify-start gap-3">
@@ -87,7 +87,7 @@ export default function HeroSection() {
                 <span className="text-lg md:text-2xl">🚀</span>
               </div>
               <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white rounded-full p-2 md:p-4 shadow-lg border-2 border-black">
-                <span className="text-lg md:text-2xl">💡</span>
+                <span className="text-lg md:text-2xl">👨🏻‍💻</span>
               </div>
             </div>
           </div>
