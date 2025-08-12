@@ -9,22 +9,28 @@ export default function SkillsSection() {
   ]
 
   const technicalSkills = [
-    { name: "Photoshop", percentage: 90 },
-    { name: "JavaScript", percentage: 85 },
-    { name: "React", percentage: 80 },
-    { name: "Node.js", percentage: 75 },
     { name: "HTML/CSS", percentage: 95 },
-    { name: "Python", percentage: 70 },
+    { name: "JavaScript", percentage: 85 },
+    { name: "React", percentage: 85 },
+    { name: "Tailwind", percentage: 90 },
+    { name: "Bootstrap", percentage: 80 },
+    { name: "Wordpress/Shopify", percentage: 80 },
+    { name: "Node.js", percentage: 70 },
+    { name: "Express.js", percentage: 70 },
+    { name: "Next.js", percentage: 65 },
+    { name: "MongoDB", percentage: 65 },
+    { name: "MySQL", percentage: 65 },
+    { name: "Firebase", percentage: 65 },
   ]
 
   return (
-    <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-gray-900">
+    <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black">
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
-        <div className="w-16 h-1 bg-lime-400 mb-12"></div>
+        <div className="w-16 h-1 bg-yellow-300 mb-12"></div>
 
         {/* Language Skills - Circular Progress */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
           {skills.map((skill, index) => (
             <div key={index} className="text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
@@ -47,7 +53,7 @@ export default function SkillsSection() {
                     fill="transparent"
                     strokeDasharray={`${2 * Math.PI * 40}`}
                     strokeDashoffset={`${2 * Math.PI * 40 * (1 - skill.percentage / 100)}`}
-                    className="text-lime-400"
+                    className="text-yellow-300"
                     strokeLinecap="round"
                   />
                 </svg>
@@ -58,21 +64,21 @@ export default function SkillsSection() {
               <h3 className="text-white font-medium">{skill.name}</h3>
             </div>
           ))}
-        </div>
+        </div> */}
 
         {/* Technical Skills - Progress Bars */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div>
             <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3>
-            {technicalSkills.slice(0, 3).map((skill, index) => (
+            {technicalSkills.slice(0, 6).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
                   <span className="text-white">{skill.name}</span>
-                  <span className="text-lime-400">{skill.percentage}%</span>
+                  <span className="text-yellow-300">{skill.percentage}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div
-                    className="bg-lime-400 h-2 rounded-full transition-all duration-1000"
+                    className="bg-yellow-300 h-2 rounded-full transition-all duration-1000"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>
@@ -80,16 +86,16 @@ export default function SkillsSection() {
             ))}
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-300">DESIGN</h3>
-            {technicalSkills.slice(3).map((skill, index) => (
+            <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3>
+            {technicalSkills.slice(6).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
                   <span className="text-white">{skill.name}</span>
-                  <span className="text-lime-400">{skill.percentage}%</span>
+                  <span className="text-yellow-300">{skill.percentage}%</span>
                 </div>
                 <div className="w-full bg-gray-700 rounded-full h-2">
                   <div
-                    className="bg-lime-400 h-2 rounded-full transition-all duration-1000"
+                    className="bg-yellow-300 h-2 rounded-full transition-all duration-1000"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>

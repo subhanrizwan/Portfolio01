@@ -20,9 +20,9 @@ export default function Navigation() {
         >
           <label   className="flex flex-col gap-2 w-8">
     <input onClick={() => setMobileMenuOpen(!mobileMenuOpen)} className="peer hidden" type="checkbox" />
-    <div className="rounded-2xl h-[2px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]" />
-    <div className="rounded-2xl h-[2px] w-full bg-black duration-500 peer-checked:-rotate-45" />
-    <div className="rounded-2xl h-[2px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]" />
+    <div className="rounded-2xl h-[3px] w-1/2 bg-black duration-500 peer-checked:rotate-[225deg] origin-right peer-checked:-translate-x-[12px] peer-checked:-translate-y-[1px]" />
+    <div className="rounded-2xl h-[3px] w-full bg-black duration-500 peer-checked:-rotate-45" />
+    <div className="rounded-2xl h-[3px] w-1/2 bg-black duration-500 place-self-end peer-checked:rotate-[225deg] origin-left peer-checked:translate-x-[12px] peer-checked:translate-y-[1px]" />
   </label>
          
         </button>
@@ -35,7 +35,7 @@ export default function Navigation() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block text-2xl text-white hover:text-lime-400 hover:translate-x-5 hover:before:block  hover:before:transition-all hover:before:duration-300 transition duration-300 before:absolute before:-translate-x-4 before:translate-y-[1rem] before:hidden before:w-2 before:bg-yellow-400 before:h-2 before:rounded-full before:content['']"
+                className="block text-2xl text-white hover:text-yellow-300 hover:translate-x-5 hover:before:block  hover:before:transition-all hover:before:duration-300 transition duration-300 before:absolute before:-translate-x-4 before:translate-y-[1rem] before:hidden before:w-2 before:bg-yellow-400 before:h-2 before:rounded-full before:content['']"
               >
                 {item}
               </button>
