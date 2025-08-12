@@ -1,5 +1,5 @@
 "use client"
-
+import Heading from "./Heading"
 export default function SkillsSection() {
   const skills = [
     { name: "English", percentage: 85 },
@@ -26,8 +26,9 @@ export default function SkillsSection() {
   return (
     <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black">
       <div className="max-w-7xl mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2>
-        <div className="w-16 h-1 bg-yellow-300 mb-12"></div>
+         <Heading Skills={'The Stack I Master'}/>
+        {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2> */}
+        {/* <div className="w-16 h-1 bg-yellow-300 mb-12"></div> */}
 
         {/* Language Skills - Circular Progress */}
         {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">

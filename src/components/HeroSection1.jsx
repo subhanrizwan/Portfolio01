@@ -3,7 +3,7 @@ import { Phone, Email, LocationOn } from "@mui/icons-material"
 import Image from "../assets/images/Subhan.png";
 import { IoLogoWhatsapp } from "react-icons/io";
 import { GrReactjs } from "react-icons/gr";
-
+import Rectangle from "./Rectangle";
 const Details = {
   welcome: "console.log('Hello Everyone!')",
   name: "I am Subhan Ahmed",
@@ -37,7 +37,8 @@ export default function HeroSection() {
           {/* Left Content - Improved responsive spacing */}
           <div className="order-2 lg:order-1 text-start lg:text-left lg:ml-20 px-4">
             <div className="flex items-center justify-start lg:justify-start gap-2 mb-4">
-              <span className="text-yellow-300 text-md">👋</span>{" "}
+              {/* <span className="text-yellow-300 text-md">👋</span>{" "} */}
+              <Rectangle />
               <span className="text-gray-300 text-sm md:text-base">{Details.welcome}</span>
             </div>
 
@@ -83,10 +84,10 @@ export default function HeroSection() {
               </div>
 
               {/* Floating badges - Improved positioning for mobile */}
-              <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white rounded-full p-2 md:p-4 shadow-lg border-2 border-black">
+              <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white rounded-full p-2 md:p-4 shadow-lg ">
                 <span className="text-lg md:text-2xl">🚀</span>
               </div>
-              <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white rounded-full p-2 md:p-4 shadow-lg border-2 border-black">
+              <div className="absolute -bottom-2 -left-2 md:-bottom-4 md:-left-4 bg-white rounded-full p-2 md:p-4 shadow-lg ">
                 <span className="text-lg md:text-2xl">👨🏻‍💻</span>
               </div>
             </div>

@@ -4,9 +4,9 @@ export default function ResumeSection() {
   return (
     <section className="py-12 md:py-20 px-4 md:px-6 lg:px-12 bg-gradient-to-b from-black via-yellow-500/10 to-black">
       <div className="max-w-6xl mx-auto">
-            <Heading Resume={'My Resume'} />
+            <Heading Resume={'Journey So Far'}/>
         {/* <h2 className="text-2xl md:text-3xl lg:text-4xl font-bold mb-4 text-white">My Resume</h2> */}
-        <div className="w-16 h-1 bg-yellow-300 mb-8 md:mb-12"></div>
+        {/* <div className="w-16 h-1 bg-yellow-300 mb-8 md:mb-12"></div> */}
 
         <div className="flex justify-center mb-8">
           <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors text-sm md:text-base">

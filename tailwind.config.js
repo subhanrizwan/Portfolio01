@@ -1,11 +1,12 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-     "./src/**/*.{js,jsx,ts,tsx}",
+    "./index.html",
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
-        keyframes: {
+      keyframes: {
         //For Hero Section
           float: {
           '0%, 100%': { transform: 'translateY(0)' },
@@ -41,7 +42,6 @@ export default {
       //   Fieldbg:'#F5F5F5'
       // }
     },
-    // },
   },
   plugins: [],
 }
