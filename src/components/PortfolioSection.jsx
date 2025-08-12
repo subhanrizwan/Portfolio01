@@ -1,62 +1,69 @@
-"use client"
-
-import { useState } from "react"
+"use client";
+// import Image from "../assets/images/Subhan.png";
+// import { useState } from "react";
+import proj1 from "../assets/images/first.png";
+import proj2 from "../assets/images/proj2.png";
+import proj3 from "../assets/images/proj3.png";
+import proj4 from "../assets/images/proj4.png";
+import proj5 from "../assets/images/proj5.png";
+import proj6 from "../assets/images/proj6.png";
 
 export default function PortfolioSection() {
-  const [activeFilter, setActiveFilter] = useState("All Works")
-
   const portfolioItems = [
-    { id: 1, image: "../assets/images/Subhan.png", category: "Photography" },
-    { id: 2, image: "../assets/images/Subhan.png", category: "Branding" },
-    { id: 3, image: "../assets/images/Subhan.png", category: "Other" },
-    { id: 4, image: "../assets/images/Subhan.png", category: "Other" },
-    { id: 5, image: "../assets/images/Subhan.png", category: "Other" },
-    { id: 6, image: "/images/portfolio-6.png", category: "Other" },
-    { id: 7, image: "/images/portfolio-7.png", category: "Other" },
-    { id: 8, image: "/images/portfolio-8.png", category: "Branding" },
-    { id: 9, image: "/images/portfolio-9.png", category: "Photography" },
-  ]
+    {
+      id: 1,
+      image: proj1,
+    },
+    {
+      id: 2,
+      image: proj2,
+    },
+    {
+      id: 3,
+      image: proj3,
+    },
+    {
+      id: 4,
+      image: proj4,
+    },
+    {
+      id: 5,
+      image: proj5,
+    },
+    {
+      id: 6,
+      image: proj6,
 
-  const filteredPortfolio =
-    activeFilter === "All Works" ? portfolioItems : portfolioItems.filter((item) => item.category === activeFilter)
+    },
+  ];
 
   return (
-    <section id="portfolio" className="py-20 px-6 md:px-12 lg:px-24">
+    <section
+      id="portfolio"
+      className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+    >
       <div className="max-w-7xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold mb-4">Portfolio</h2>
         <div className="w-16 h-1 bg-yellow-300 mb-12"></div>
-
-        {/* Filter Tabs */}
-        <div className="flex flex-wrap gap-4 mb-12">
-          {["All Works", "Photography", "Branding", "Other"].map((filter) => (
-            <button
-              key={filter}
-              onClick={() => setActiveFilter(filter)}
-              className={`px-4 py-2 rounded transition-colors ${
-                activeFilter === filter ? "text-yellow-300 border-b-2 border-yellow-300" : "text-gray-400 hover:text-white"
-              }`}
-            >
-              {filter}
-            </button>
-          ))}
-        </div>
-
         {/* Portfolio Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {filteredPortfolio.map((item) => (
-            <div key={item.id} className="group relative overflow-hidden rounded-lg">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gr">
+          {portfolioItems.map((item) => (
+            <div
+              key={item.id}
+              className="group relative overflow-hidden rounded-lg group h-64
+              shadow-lg hover:shadow-xl transition-shadow duration-300"
+            >
               <img
+                style={{ transition: "transform 6s linear" }}
                 src={item.image || "/placeholder.svg"}
                 alt={`Portfolio item ${item.id}`}
-                className="w-full h-64 object-cover transition-transform duration-300 group-hover:scale-110"
+                className="w-full h-auto transition-transform duration-300 translate-y-[0%] group-hover:translate-y-[-83%]"
               />
-              <div className="absolute inset-0 bg-black bg-opacity-50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                <button className="bg-yellow-300 text-black px-4 py-2 rounded-full font-medium">View Project</button>
-              </div>
+              {/* <div className="absolute inset-0 overflow-hidden bg-gray-200 group-hover:opacity-0 bg-opacity-50 opacity-1  transition-opacity duration-300 flex items-center justify-center"></div> */}
             </div>
           ))}
         </div>
       </div>
     </section>
-  )
+  );
 }

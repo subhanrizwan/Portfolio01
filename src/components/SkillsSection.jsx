@@ -67,7 +67,7 @@ export default function SkillsSection() {
         </div> */}
 
         {/* Technical Skills - Progress Bars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
             <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3>
             {technicalSkills.slice(0, 6).map((skill, index) => (
@@ -76,9 +76,9 @@ export default function SkillsSection() {
                   <span className="text-white">{skill.name}</span>
                   <span className="text-yellow-300">{skill.percentage}%</span>
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-700 rounded-full h-1">
                   <div
-                    className="bg-yellow-300 h-2 rounded-full transition-all duration-1000"
+                    className="bg-yellow-300 h-1 rounded-full transition-all duration-1000"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>
@@ -93,9 +93,9 @@ export default function SkillsSection() {
                   <span className="text-white">{skill.name}</span>
                   <span className="text-yellow-300">{skill.percentage}%</span>
                 </div>
-                <div className="w-full bg-gray-700 rounded-full h-2">
+                <div className="w-full bg-gray-700 rounded-full h-1">
                   <div
-                    className="bg-yellow-300 h-2 rounded-full transition-all duration-1000"
+                    className="bg-yellow-300 h-1 rounded-full transition-all duration-1000"
                     style={{ width: `${skill.percentage}%` }}
                   ></div>
                 </div>
