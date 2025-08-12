@@ -1,6 +1,4 @@
 "use client";
-// import Image from "../assets/images/Subhan.png";
-// import { useState } from "react";
 import proj1 from "../assets/images/first.png";
 import proj2 from "../assets/images/proj2.png";
 import proj3 from "../assets/images/proj3.png";

@@ -1,56 +1,45 @@
-"use client"
-
+"use client";
+import { Link } from "@mui/material";
+import Image from "../assets/images/Subhan.png";
+import Socialicons from "../components/SocialIcon.jsx";
 export default function ContactSection() {
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      setMobileMenuOpen(false);
+    }
+  };
   return (
-    <section id="contact" className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black">
+    <section
+      id="contact"
+      className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+    >
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
           {/* Left Side - Contact Info */}
           <div>
-            <h2 className="text-2xl font-bold mb-8">Write me</h2>
-            <div className="mb-12">
-              <a
-                href="mailto:hello@mosbycreative.com"
-                className="text-white text-lg hover:text-yellow-300 transition-colors"
+            <div className="flex items-center gap-x-6">
+              <div className="w-24 h-24 bg-yellow-300 rounded-full flex justify-center items-center overflow-hidden">
+                <img src={Image} alt="Subhan's image" srcset="" />
+              </div>
+              <div className="">
+                <h2 className="text-2xl font-bold mb-0">Write me</h2>
+                <h2 className="text-1xl font-bold mb-0">
+                  Let's discuss your next project
+                </h2>
+              </div>
+            </div>
+            <div className="mb-12 mt-12">
+              <Link
+                href="mailto:developersubhanahmed@gmail.com"
+                className="!text-white text-lg hover:text-yellow-300 transition-colors"
               >
-                hello@mosbycreative.com
-              </a>
+                developersubhanahmed@gmail.com
+              </Link>
             </div>
-
-            <h3 className="text-2xl font-bold mb-8">My office</h3>
-            <div className="mb-12">
-              <p className="text-white text-lg leading-relaxed">
-                1444 S. Alameda Street Los Angeles,
-                <br />
-                California 90021
-              </p>
-            </div>
-
             <h3 className="text-2xl font-bold mb-8">Follow us</h3>
-            <div className="space-y-4">
-              <div className="flex flex-wrap gap-4">
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  Facebook.
-                </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  Twitter.
-                </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  Behance.
-                </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  Dribbble.
-                </a>
-              </div>
-              <div className="flex flex-wrap gap-4">
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  Instagram.
-                </a>
-                <a href="#" className="text-white hover:text-yellow-300 transition-colors">
-                  LinkedIn.
-                </a>
-              </div>
-            </div>
+            <Socialicons />
           </div>
 
           {/* Right Side - Contact Form */}
@@ -96,42 +85,28 @@ export default function ContactSection() {
             </form>
           </div>
         </div>
-
-        {/* Brand Logos Section */}
-        {/* <div className="mt-20 pt-16 border-t border-gray-800">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-items-center">
-            <div className="text-white text-2xl font-bold">gleam</div>
-            <div className="text-white text-2xl font-bold">
-              check
-              <br />
-              this
-            </div>
-            <div className="text-white text-2xl font-bold tracking-wider">EXIMIA</div>
-            <div className="text-white text-2xl font-bold tracking-widest">M A M O K O</div>
-          </div>
-        </div> */}
-
         {/* Footer */}
         <div className="mt-16 pt-8 border-t border-gray-800">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 mb-4 md:mb-0">Copyright 2025 - All right reserved</div>
-            <div className="flex gap-6">
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Facebook
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Twitter
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Instagram
-              </a>
-              <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                Dribbble
-              </a>
+            <div className="text-gray-400 mb-4 md:mb-0">
+              Copyright 2025 - All right reserved
             </div>
+            <p className="flex gap-x-3 cursor-pointer">
+              {["Home", "About", "Skills", "Portfolio", "Contact"].map(
+                (data) => (
+                  <Link
+                    key={data}
+                    onClick={() => scrollToSection(data.toLowerCase())}
+                    className="!text-gray-400 !no-underline hover:!text-yellow-300 duration-300"
+                  >
+                    {data}{" "}
+                  </Link>
+                )
+              )}
+            </p>
           </div>
         </div>
       </div>
     </section>
-  )
+  );
 }

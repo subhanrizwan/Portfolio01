@@ -16,7 +16,7 @@ const Details = {
 
 export default function HeroSection() {
   return (
-    <section className="min-h-screen bg-gradient-to-b from-black via-yellow-500/10 to-black relative overflow-hidden">
+    <section id="home" className="min-h-screen bg-gradient-to-b from-black via-yellow-500/10 to-black relative overflow-hidden">
       {/* Decorative elements - Updated to yellow theme */}
       <div
         className="absolute top-10 left-4 md:top-20 md:left-20 w-20 h-20 md:w-32 md:h-32 bg-yellow-400/30 rounded-full opacity-60 animate-bounce"
