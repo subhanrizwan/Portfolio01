@@ -83,7 +83,6 @@ export default function HeroSection() {
                 />
               </div>
 
-              {/* Floating badges - Improved positioning for mobile */}
               <div className="absolute -top-2 -right-2 md:-top-4 md:-right-4 bg-white rounded-full p-2 md:p-4 shadow-lg ">
                 <span className="text-lg md:text-2xl">🚀</span>
               </div>
