@@ -1,6 +1,6 @@
 "use client";
 import { Link, TextField } from "@mui/material";
-import Image from "../assets/images/Subhan.png";
+import Image from '../assets/images/profile.png'
 import Socialicons from "../components/SocialIcon.jsx";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";

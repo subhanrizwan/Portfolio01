@@ -1,6 +1,6 @@
 "use client";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
-import Image from "../assets/images/Subhan.png";
+import Image from '../assets/images/profile.png'
 const Details = {
   
   welcome: "console.log('Hello Everyone!')",
@@ -74,7 +74,7 @@ export default function HeroSection() {
               ></div>
 
               {/* Main image container */}
-              <div className="relative w-full h-full rounded-lg overflow-hidden border-2 border-yellow-300/50 shadow-2xl shadow-yellow-300/20">
+              <div className="relative w-full h-full object-contain rounded-lg overflow-hidden border-2 border-yellow-300/50 shadow-2xl shadow-yellow-300/20">
                 <img
                   src={Image}
                   alt="Subhan Ahmed"

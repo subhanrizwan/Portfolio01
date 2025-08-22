@@ -1,20 +1,20 @@
 "use client"
 import { Phone, Email, LocationOn } from "@mui/icons-material"
-import Image from "../assets/images/Subhan.png";
+import Image from '../assets/images/profile.png'
 import { IoLogoWhatsapp } from "react-icons/io";
 import { GrReactjs } from "react-icons/gr";
 import Rectangle from "./Rectangle";
 const Details = {
-  welcome: "console.log('Hello Everyone!')",
-  name: "I am Subhan Ahmed",
+  welcome: "console.log('Welcome to my Portfolio!')",
+  name: "I am John Doe",
   ima: "Creative ",
   position: "Web Developer",
-  phone: "+92 334 3760625",
-  email: "developersubhanahmed@gmail.com",
-  address: "Karachi, Pakistan",
+  phone: "+00 123 4567890",
+  email: "example@email.com",
+  address: "Your City, Country",
   description:
-    "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences",
-}
+    "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
+};
 
 export default function HeroSection() {
   return (
@@ -79,7 +79,7 @@ export default function HeroSection() {
                 <img
                   src={Image}
                   alt="Subhan Ahmed"
-                  className="w-full h-full object-cover rounded-2xl"
+                  className="w-full h-full object-contain rounded-2xl"
                 />
               </div>
 
