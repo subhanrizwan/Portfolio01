@@ -33,7 +33,9 @@ export default {
     moveRight: 'moveRight 3s linear infinite',
     float: 'float 4s ease-in-out infinite',
   },
-
+ fontFamily: {
+        sans: ["Sora", "sans-serif"], 
+      },
       // colors:{
       //   primary:'rgba(3, 4, 6, 1)',
       //   secondary:'#03ada4',

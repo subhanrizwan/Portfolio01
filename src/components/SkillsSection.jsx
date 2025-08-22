@@ -14,13 +14,13 @@ export default function SkillsSection() {
     { name: "React", percentage: 85 },
     { name: "Tailwind", percentage: 90 },
     { name: "Bootstrap", percentage: 80 },
-    { name: "Wordpress/Shopify", percentage: 80 },
+    // { name: "Wordpress/Shopify", percentage: 80 },
     { name: "Node.js", percentage: 70 },
     { name: "Express.js", percentage: 70 },
     { name: "Next.js", percentage: 65 },
     { name: "MongoDB", percentage: 65 },
     { name: "MySQL", percentage: 65 },
-    { name: "Firebase", percentage: 65 },
+    // { name: "Firebase", percentage: 65 },
   ]
 
   return (
@@ -70,8 +70,8 @@ export default function SkillsSection() {
         {/* Technical Skills - Progress Bars */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3>
-            {technicalSkills.slice(0, 6).map((skill, index) => (
+            {/* <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3> */}
+            {technicalSkills.slice(0, 5).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
                   <span className="text-white">{skill.name}</span>
@@ -87,8 +87,8 @@ export default function SkillsSection() {
             ))}
           </div>
           <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3>
-            {technicalSkills.slice(6).map((skill, index) => (
+            {/* <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3> */}
+            {technicalSkills.slice(5).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
                   <span className="text-white">{skill.name}</span>

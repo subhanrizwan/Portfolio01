@@ -33,16 +33,16 @@ export default function AboutSection() {
       description:
         "Theme customization (Shopify/WordPress), Regular updates & security fixes",
     },
-    {
-      icon: <GridViewIcon className="w-8 h-8" />,
-      title: "UI/UX Design to Code",
-      description: "Converting Figma/PSD designs into functional websites",
-    },
-    {
-      icon: <CasesIcon className="w-8 h-8" />,
-      title: "Portfolio & Business Websites",
-      description: "Company profile & services websites",
-    },
+      {
+        icon: <GridViewIcon className="w-8 h-8" />,
+        title: "UI/UX Design to Code",
+        description: "Converting Figma/PSD designs into functional websites",
+      },
+      {
+        icon: <CasesIcon className="w-8 h-8" />,
+        title: "Portfolio & Business Websites",
+        description: "Company profile & services websites",
+      },
   ];
 
   return (
@@ -51,20 +51,16 @@ export default function AboutSection() {
       className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
     >
       <div className="max-w-7xl mx-auto">
-                    <Heading Services={'How I Can Help'}/>
-        
-        {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">What I do</h2> */}
-        {/* <div className="w-16 h-1 bg-yellow-300 mb-12"></div> */}
-        
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer">
+        <Heading Services={"How I Can Help"} />
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 cursor-pointer ">
           {services.map((service, index) => (
-            <div key={index} className="group">
+            <div key={index}
+            className="group md:border-r-[0.2px] md:border-yellow-300">
               <div className="text-yellow-300 mb-4">{service.icon}</div>
               <h3 className="text-xl font-semibold mb-3 group-hover:text-yellow-300 transition-colors">
                 {service.title}
               </h3>
-              <p className="text-gray-400">{service.description}</p>
+              {/* <p className="text-gray-400 text-sm">{service.description}</p> */}
             </div>
           ))}
         </div>

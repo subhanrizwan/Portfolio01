@@ -37,7 +37,6 @@ export default function HeroSection() {
           {/* Left Content - Improved responsive spacing */}
           <div className="order-2 lg:order-1 text-start lg:text-left lg:ml-20 px-4">
             <div className="flex items-center justify-start lg:justify-start gap-2 mb-4">
-              {/* <span className="text-yellow-300 text-md">👋</span>{" "} */}
               <Rectangle />
               <span className="text-gray-300 text-sm md:text-base">{Details.welcome}</span>
             </div>
@@ -47,18 +46,19 @@ export default function HeroSection() {
               {Details.ima} <span className="text-yellow-300">{Details.position}</span>
             </h2>
 
+            {/* Personal Information */}
             <div className="space-y-3 md:space-y-4 mb-6 md:mb-8">
               <div className="flex items-center  lg:justify-start gap-3">
-                <IoLogoWhatsapp className="text-yellow-300 w-4 h-4 md:w-5 md:h-5" />
-                <span className="text-gray-300 text-sm md:text-base">{Details.phone}</span>
+                <IoLogoWhatsapp className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm">{Details.phone}</span>
               </div>
               <div className="flex items-center  lg:justify-start gap-3">
-                <Email className="text-yellow-300 w-4 h-4 md:w-5 md:h-5" />
-                <span className="text-gray-300 text-sm md:text-base break-all">{Details.email}</span>
+                <Email className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm break-all">{Details.email}</span>
               </div>
               <div className="flex items-center lg:justify-start gap-3">
-                <LocationOn className="text-yellow-300 w-4 h-4 md:w-5 md:h-5" />
-                <span className="text-gray-300 text-sm md:text-base">{Details.address}</span>
+                <LocationOn className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm">{Details.address}</span>
               </div>
             </div>
 
