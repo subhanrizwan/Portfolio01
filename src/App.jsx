@@ -8,7 +8,7 @@ import PortfolioSection from "./components/PortfolioSection.jsx"
 import EducationSection from "./components/EducationSection.jsx"
 import ResumeSection from "./components/ResumeSection.jsx"
 import ContactSection from "./components/ContactSection.jsx"
-
+import Slider from "./components/PortfolioSlider.jsx"
 function App() {
   return (
       <div className="bg-black text-white min-h-screen">
@@ -18,6 +18,7 @@ function App() {
       <AboutSection />
       <SkillsSection />
       <PortfolioSection />
+      <Slider />
       <ResumeSection />
       <EducationSection />
       <ContactSection />

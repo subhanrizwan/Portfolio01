@@ -1,25 +1,24 @@
 "use client";
-import { Link, TextField ,Button} from "@mui/material";
+import { Link, TextField, Button } from "@mui/material";
 import Image from "../assets/images/profile.png";
 import Socialicons from "../components/SocialIcon.jsx";
 import React, { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Phone, Email, LocationOn } from "@mui/icons-material"
-import { IoLogoWhatsapp,IoIosSend } from "react-icons/io";
-
+import { Phone, Email, LocationOn } from "@mui/icons-material";
+import { IoLogoWhatsapp, IoIosSend } from "react-icons/io";
 
 export default function ContactSection() {
   const Details = {
-  welcome: "console.log('Welcome to my Portfolio!')",
-  name: "I am John Doe",
-  ima: "Creative ",
-  position: "Web Developer",
-  phone: "+00 123 4567890",
-  email: "example@email.com",
-  address: "Your City, Country",
-  description:
-    "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
-};
+    welcome: "console.log('Welcome to my Portfolio!')",
+    name: "I am John Doe",
+    ima: "Creative ",
+    position: "Web Developer",
+    phone: "+00 123 4567890",
+    email: "example@email.com",
+    address: "Your City, Country",
+    description:
+      "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
+  };
 
   const form = useRef();
 
@@ -100,20 +99,26 @@ export default function ContactSection() {
                 developersubhanahmed@gmail.com
               </Link>
             </div> */}
-              <div className="space-y-3 md:space-y-4 mb-6  md:mb-8">
-                          <div className="flex items-center  lg:justify-start gap-3">
-                            <IoLogoWhatsapp className="text-yellow-300 text-2xl" />
-                            <span className="text-gray-300 text-sm md:text-sm">{Details.phone}</span>
-                          </div>
-                          <div className="flex items-center  lg:justify-start gap-3">
-                            <Email className="text-yellow-300 text-2xl" />
-                            <span className="text-gray-300 text-sm md:text-sm break-all">{Details.email}</span>
-                          </div>
-                          <div className="flex items-center lg:justify-start gap-3">
-                            <LocationOn className="text-yellow-300 text-2xl" />
-                            <span className="text-gray-300 text-sm md:text-sm">{Details.address}</span>
-                          </div>
-                        </div>
+            <div className="space-y-3 md:space-y-4 mb-6  md:mb-8">
+              <div className="flex items-center  lg:justify-start gap-3">
+                <IoLogoWhatsapp className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm">
+                  {Details.phone}
+                </span>
+              </div>
+              <div className="flex items-center  lg:justify-start gap-3">
+                <Email className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm break-all">
+                  {Details.email}
+                </span>
+              </div>
+              <div className="flex items-center lg:justify-start gap-3">
+                <LocationOn className="text-yellow-300 text-2xl" />
+                <span className="text-gray-300 text-sm md:text-sm">
+                  {Details.address}
+                </span>
+              </div>
+            </div>
             <h3 className="text-2xl font-bold mb-8">Follow us</h3>
             <Socialicons />
           </div>
@@ -227,22 +232,20 @@ export default function ContactSection() {
                 />
               </div>
               <div>
-              
-              <Button
-              className='gap-x-2 !px-8 !py-3'
-                sx={{
-                  backgroundColor: "#facc15",
-                  color: "black",
-                    borderRadius:'50px',
-                  "&:hover": {
-                    backgroundColor: "#fff",
-                  },
-                }}
-                variant="outlined"
-              >
-                Send <IoIosSend fontSize={'large'} />
-              </Button>
-
+                <Button
+                  className="gap-x-2 !px-8 !py-3"
+                  sx={{
+                    backgroundColor: "#facc15",
+                    color: "black",
+                    borderRadius: "50px",
+                    "&:hover": {
+                      backgroundColor: "#fff",
+                    },
+                  }}
+                  variant="outlined"
+                >
+                  Send <IoIosSend fontSize={"large"} />
+                </Button>
               </div>
             </form>
           </div>
@@ -270,6 +273,9 @@ export default function ContactSection() {
             </p>
           </div>
         </div>
+        <div style={{
+          backgroundImage:`url(')`
+        }} className="page-bottom-bg absolute w-screen h-[218px] bg-center bg-no-repeat left-1/2 bottom-0 -translate-x-1/2 pointer-events-none" />
       </div>
     </section>
   );
