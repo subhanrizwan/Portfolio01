@@ -1,4 +1,5 @@
 "use client"
+import { CircularProgress } from "@mui/material"
 import Heading from "./Heading"
 export default function SkillsSection() {
   const skills = [
@@ -31,8 +32,8 @@ export default function SkillsSection() {
         {/* <div className="w-16 h-1 bg-yellow-300 mb-12"></div> */}
 
         {/* Language Skills - Circular Progress */}
-        {/* <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
-          {skills.map((skill, index) => (
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-0">
+          {technicalSkills.map((skill, index) => (
             <div key={index} className="text-center">
               <div className="relative w-24 h-24 mx-auto mb-4">
                 <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
@@ -41,7 +42,7 @@ export default function SkillsSection() {
                     cy="50"
                     r="40"
                     stroke="currentColor"
-                    strokeWidth="8"
+                    strokeWidth="4"
                     fill="transparent"
                     className="text-gray-700"
                   />
@@ -50,7 +51,7 @@ export default function SkillsSection() {
                     cy="50"
                     r="40"
                     stroke="currentColor"
-                    strokeWidth="8"
+                    strokeWidth="4"
                     fill="transparent"
                     strokeDasharray={`${2 * Math.PI * 40}`}
                     strokeDashoffset={`${2 * Math.PI * 40 * (1 - skill.percentage / 100)}`}
@@ -65,12 +66,13 @@ export default function SkillsSection() {
               <h3 className="text-white font-medium">{skill.name}</h3>
             </div>
           ))}
-        </div> */}
+        </div>
+      {/* <CircularProgress variant="determinate" value={70} /> */}
 
         {/* Technical Skills - Progress Bars */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
           <div>
-            {/* <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3> */}
+            <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3>
             {technicalSkills.slice(0, 5).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
@@ -87,7 +89,7 @@ export default function SkillsSection() {
             ))}
           </div>
           <div>
-            {/* <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3> */}
+            <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3>
             {technicalSkills.slice(5).map((skill, index) => (
               <div key={index} className="mb-6">
                 <div className="flex justify-between mb-2">
@@ -103,7 +105,7 @@ export default function SkillsSection() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
       </div>
     </section>
   )
