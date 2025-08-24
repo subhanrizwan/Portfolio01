@@ -16,11 +16,11 @@ export default function SkillsSection() {
     { name: "Tailwind", percentage: 90 },
     { name: "Bootstrap", percentage: 80 },
     // { name: "Wordpress/Shopify", percentage: 80 },
-    { name: "Node.js", percentage: 70 },
-    { name: "Express.js", percentage: 70 },
-    { name: "Next.js", percentage: 65 },
-    { name: "MongoDB", percentage: 65 },
-    { name: "MySQL", percentage: 65 },
+    // { name: "Node.js", percentage: 70 },
+    // { name: "Express.js", percentage: 70 },
+    // { name: "Next.js", percentage: 65 },
+    // { name: "MongoDB", percentage: 65 },
+    // { name: "MySQL", percentage: 65 },
     // { name: "Firebase", percentage: 65 },
   ]
 

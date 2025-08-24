@@ -2,18 +2,16 @@
 import Heading from "./Heading.jsx";
 export default function ResumeSection() {
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 lg:px-12 bg-gradient-to-b from-black via-yellow-500/10 to-black">
+    <section className="py-12 md:py-16 px-4 md:px-6 lg:px-12 bg-gradient-to-b from-black via-yellow-500/10 to-black">
       <div className="max-w-7xl mx-auto">
         <Heading Resume={"Journey So Far"} />
-        <div className="flex justify-center mb-8">
-          <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors text-sm md:text-base">
+        <div className="flex justify-center mb-0">
+          {/* <button className="bg-white text-black px-6 py-3 rounded-full font-medium hover:bg-gray-200 transition-colors text-sm md:text-base">
             Work Experience
-          </button>
+          </button> */}
         </div>
-
-      
         {/* Desktop Timeline */}
-        <div className="">
+        <div className="p-3">
           <div className="relative">
             <div className="space-y-6 lg:space-y-6">
                {/* Experience Item 1 */}
