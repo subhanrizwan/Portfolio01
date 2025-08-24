@@ -1,105 +1,78 @@
 "use client";
-// import proj1 from "../assets/images/proj1.png";
-// import proj2 from "../assets/images/proj2.png";
-// import proj3 from "../assets/images/proj3.png";
-// import proj4 from "../assets/images/proj4.png";
-// import proj5 from "../assets/images/proj5.png";
-// import proj6 from "../assets/images/proj6.png";
-// import { IconButton, Tooltip } from "@mui/material";
-// import { IoMdEye } from "react-icons/io";
-// import { FaCode } from "react-icons/fa";
 import Heading from "./Heading";
 import PortfolioCard from "./PortfolioCard";
-
+import proj1 from "../assets/images/proj1.png";
+import proj2 from "../assets/images/proj2.png";
+import proj3 from "../assets/images/proj3.png";
+import proj4 from "../assets/images/proj4.png";
+import proj5 from "../assets/images/proj5.png";
+import proj6 from "../assets/images/proj6.png";
+import PortfolioSlider from "./PortfolioSlider";
 export default function PortfolioSection() {
-  // const portfolioItems = [
-  //   {
-  //     id: 1,
-  //     image: proj1,
-  //     demo: "",
-  //     git: "",
-  //   },
-  //   {
-  //     id: 2,
-  //     image: proj2,
-  //     demo: "",
-  //     git: "",
-  //   },
-  //   {
-  //     id: 3,
-  //     image: proj3,
-  //     demo: "",
-  //     git: "",
-  //   },
-  //   {
-  //     id: 4,
-  //     image: proj4,
-  //     demo: "",
-  //     git: "",
-  //   },
-  //   {
-  //     id: 5,
-  //     image: proj5,
-  //     demo: "",
-  //     git: "",
-  //   },
-  //   {
-  //     id: 6,
-  //     image: proj6,
-  //     demo: "",
-  //     git: "",
-  //   },
-  // ];
-
+  // ✅ Portfolio data array
+  const portfolioData = [
+    {
+      id: 1,
+      title: 'Project 1',
+      image: proj1,
+      demo: "https://demo1.com",
+      git: "https://github.com/demo1",
+    },
+    {
+      id: 2,
+      title: 'Project 2',
+      image: proj2,
+      demo: "https://demo2.com",
+      git: "https://github.com/demo2",
+    },
+    {
+      id: 3,
+      title: 'Project 3',
+      image: proj3,
+      demo: "https://demo3.com",
+      git: "https://github.com/demo3",
+    },
+    {
+      id: 4,
+      title: 'Project 4',
+      image: proj4,
+      demo: "https://demo4.com",
+      git: "https://github.com/demo4",
+    },
+    {
+      id: 5,
+      title: 'Project 5',
+      image: proj5,
+      demo: "https://demo5.com",
+      git: "https://github.com/demo5",
+    },
+    {
+      id: 6,
+      
+      image: proj6,
+      demo: "https://demo6.com",
+      git: "https://github.com/demo6",
+    },
+  ];
   return (
     <section
       id="portfolio"
       className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
     >
       <div className="max-w-7xl mx-auto">
+        {/* Heading */}
         <Heading Portfolio={"Code Meets Creativity"} />
-        {/* Portfolio Grid */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gr">
-          {portfolioItems.map((item) => (
-            <div className="group relative overflow-hidden rounded-lg h-64 shadow-[0_2px_40px_rgba(250,204,21,0.1)] transition-shadow duration-300 cursor-pointer">
-              <div className="relative">
-                <img
-                  style={{ transition: "transform 6s linear" }}
-                  src={item.image || "/placeholder.svg"}
-                  alt={`Portfolio item ${item.id}`}
-                  className="w-full h-auto absolute top-0 left-0 group-hover:-translate-y-[calc(100%-16rem)] transition-transform"
-                />
-              </div>
-              <div className="absolute flex justify-between bottom-0 opacity-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent group-hover:opacity-100 transform-transition duration-[1s] ">
-                <h2 className="text-md font-semibold text-white">
-                  Project Title
-                </h2>
-                <div className="space-x-3">
-                  <Tooltip key={item.id} title="Source Code">
-                    <IconButton
-                      onClick={() => window.open(item.git)}
-                      className="!bg-yellow-300 !text-black"
-                    >
-                      <FaCode fontSize={"medium"} />
-                    </IconButton>
-                  </Tooltip>
-                  <Tooltip key={item.id} title="View Demo">
-                    <IconButton
-                      onClick={() => window.open(item.demo)}
-                      className="!bg-yellow-300 !text-black"
-                    >
-                      <IoMdEye fontSize={"medium"} />
-                    </IconButton>
-                  </Tooltip>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div> */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gr">
-          <PortfolioCard />
-          <PortfolioCard />
-          <PortfolioCard />
+        {/* For Desktop and Tablet */}
+        <div className="hidden md:block">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 bg-gr">
+            {portfolioData.map((item) => (
+              <PortfolioCard key={item.id} item={item} />
+            ))}
+          </div>
+        </div>
+        {/* For Mobile */}
+        <div className="block md:hidden">
+          <PortfolioSlider />
         </div>
       </div>
     </section>
