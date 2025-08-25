@@ -9,7 +9,7 @@ export default function Navigation() {
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      setMobileMenuOpen(false); // Close menu
+      setMobileMenuOpen(false);
     }
   };
 
@@ -36,7 +36,7 @@ export default function Navigation() {
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
-                className="block text-2xl text-white hover:text-yellow-300 hover:translate-x-5 transition duration-300 relative before:absolute before:-translate-x-4 before:translate-y-[1rem] before:hidden hover:before:block before:w-2 before:h-2 before:bg-yellow-400 before:rounded-full"
+                className="block text-2xl text-white hover:text-yellow-300 hover:duration-[0.5s] hover:translate-x-5 transition duration-[0.5s] relative before:absolute before:-translate-x-4 before:translate-y-[0.85rem] before:hidden hover:before:block before:w-2 before:h-2 before:bg-yellow-400 before:rounded-full"
               >
                 {item}
               </button>

@@ -1,42 +1,54 @@
-"use client"
-import { CircularProgress } from "@mui/material"
-import Heading from "./Heading"
-export default function SkillsSection() {
-  const skills = [
-    { name: "English", percentage: 85 },
-    { name: "French", percentage: 75 },
-    { name: "Spanish", percentage: 35 },
-    { name: "Japanese", percentage: 10 },
-  ]
 
+"use client"
+import { motion } from "framer-motion"
+import Heading from "./Heading"
+
+export default function SkillsSection() {
   const technicalSkills = [
     { name: "HTML/CSS", percentage: 95 },
     { name: "JavaScript", percentage: 85 },
     { name: "React", percentage: 85 },
     { name: "Tailwind", percentage: 90 },
     { name: "Bootstrap", percentage: 80 },
-    // { name: "Wordpress/Shopify", percentage: 80 },
-    // { name: "Node.js", percentage: 70 },
-    // { name: "Express.js", percentage: 70 },
-    // { name: "Next.js", percentage: 65 },
-    // { name: "MongoDB", percentage: 65 },
-    // { name: "MySQL", percentage: 65 },
-    // { name: "Firebase", percentage: 65 },
   ]
 
-  return (
-    <section id="skills" className="py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black">
-      <div className="max-w-7xl mx-auto">
-         <Heading Skills={'The Stack I Master'}/>
-        {/* <h2 className="text-3xl md:text-4xl font-bold mb-4">My Skills</h2> */}
-        {/* <div className="w-16 h-1 bg-yellow-300 mb-12"></div> */}
+  // animation variants
+  const fadeInUp = {
+    hidden: { opacity: 0, scale: 0.8, y: 50 },
+    visible: { opacity: 1, scale: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } }
+  }
 
-        {/* Language Skills - Circular Progress */}
+  return (
+    <section
+      id="skills"
+      className="py-12 md:py-20 px-6 md:px-12 lg:px-24 
+                 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+    >
+      <div className="max-w-7xl mx-auto">
+           <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.2 }}
+        >
+        {/* Heading */}
+        <Heading Skills={"The Stack I Master"} />
+
+        {/* Technical Skills - Circular Progress */}
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-0">
           {technicalSkills.map((skill, index) => (
-            <div key={index} className="text-center">
+            <motion.div
+              key={index}
+              className="text-center"
+              variants={fadeInUp}
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: false, amount: 0.3 }}
+            >
               <div className="relative w-24 h-24 mx-auto mb-4">
-                <svg className="w-24 h-24 transform -rotate-90" viewBox="0 0 100 100">
+                <svg
+                  className="w-24 h-24 transform -rotate-90"
+                  viewBox="0 0 100 100"
+                >
                   <circle
                     cx="50"
                     cy="50"
@@ -46,7 +58,7 @@ export default function SkillsSection() {
                     fill="transparent"
                     className="text-gray-700"
                   />
-                  <circle
+                  <motion.circle
                     cx="50"
                     cy="50"
                     r="40"
@@ -54,9 +66,15 @@ export default function SkillsSection() {
                     strokeWidth="4"
                     fill="transparent"
                     strokeDasharray={`${2 * Math.PI * 40}`}
-                    strokeDashoffset={`${2 * Math.PI * 40 * (1 - skill.percentage / 100)}`}
+                    strokeDashoffset={`${2 * Math.PI * 40}`}
                     className="text-yellow-300"
                     strokeLinecap="round"
+                    initial={{ strokeDashoffset: 2 * Math.PI * 40 }}
+                    whileInView={{
+                      strokeDashoffset: 2 * Math.PI * 40 * (1 - skill.percentage / 100),
+                    }}
+                    transition={{ duration: 1.5, ease: "easeInOut" }}
+                    viewport={{ once: false }}
                   />
                 </svg>
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -64,48 +82,10 @@ export default function SkillsSection() {
                 </div>
               </div>
               <h3 className="text-white font-medium">{skill.name}</h3>
-            </div>
+            </motion.div>
           ))}
         </div>
-      {/* <CircularProgress variant="determinate" value={70} /> */}
-
-        {/* Technical Skills - Progress Bars */}
-        {/* <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-300">CODING</h3>
-            {technicalSkills.slice(0, 5).map((skill, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex justify-between mb-2">
-                  <span className="text-white">{skill.name}</span>
-                  <span className="text-yellow-300">{skill.percentage}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-1">
-                  <div
-                    className="bg-yellow-300 h-1 rounded-full transition-all duration-1000"
-                    style={{ width: `${skill.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-          <div>
-            <h3 className="text-xl font-semibold mb-6 text-gray-300">DEVELOPMENT</h3>
-            {technicalSkills.slice(5).map((skill, index) => (
-              <div key={index} className="mb-6">
-                <div className="flex justify-between mb-2">
-                  <span className="text-white">{skill.name}</span>
-                  <span className="text-yellow-300">{skill.percentage}%</span>
-                </div>
-                <div className="w-full bg-gray-700 rounded-full h-1">
-                  <div
-                    className="bg-yellow-300 h-1 rounded-full transition-all duration-1000"
-                    style={{ width: `${skill.percentage}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div> */}
+        </motion.div>
       </div>
     </section>
   )

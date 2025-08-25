@@ -5,7 +5,7 @@ import { FaCode } from "react-icons/fa";
 function PortfolioCard({ item }) {
   return (
     <>
-      <div className="group relative overflow-hidden rounded-lg h-64 shadow-[0_2px_40px_rgba(250,204,21,0.1)] transition-shadow duration-300 cursor-pointer">
+      <div className="group relative overflow-hidden rounded-lg h-64 shadow-[0_5px_20px_rgba(250,204,21,0.2)] transition-shadow duration-300 cursor-pointer">
         <div className="relative">
           <img
             style={{ transition: "transform 6s linear" }}
@@ -17,8 +17,8 @@ function PortfolioCard({ item }) {
         {/**/}
         <div className="absolute flex justify-between bottom-0 opacity-0 left-0 right-0 p-4 bg-gradient-to-t from-black to-transparent group-hover:opacity-100 transform-transition duration-[1s] ">
           <h2 className="text-lg font-semibold text-white">{item.title}</h2>
-          <div className="space-x-3">
-            <Tooltip key={item.id} title="Source Code">
+          <div key={item.id} className="space-x-3">
+            <Tooltip title="Source Code">
               <IconButton
                 onClick={() => window.open(item.git)}
                 className="!bg-yellow-300 !text-black"
@@ -26,7 +26,7 @@ function PortfolioCard({ item }) {
                 <FaCode fontSize={"medium"} />
               </IconButton>
             </Tooltip>
-            <Tooltip key={item.id} title="View Demo">
+            <Tooltip title="View Demo">
               <IconButton
                 onClick={() => window.open(item.demo)}
                 className="!bg-yellow-300 !text-black"
