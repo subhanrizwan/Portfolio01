@@ -15,12 +15,21 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
 
   const Details = {
+    ProfileImage: Image,
+    Profiletitle: "Write me",
+    ProfileSubtitle: "Let's discuss your next project",
     phone: "+00 123 4567890",
     email: "example@email.com",
     address: "Your City, Country",
+    githubIcon: <IoLogoWWhatsapp />,
     github: "https://github.com/yourusername",
+    linkedinIcon: <IoLogoWhatsapp />,
     linkedin: "https://linkedin.com/in/yourusername",
-    email: "example@email.com"
+    emailIcon: <IoLogoWhatsapp />,
+    email: "example@email.com",
+    Follow: "Follow us",
+    FormHeading: "Or fill this form",
+    SubmitBtnText: "Send"
   };
 
   const form = useRef();
@@ -98,29 +107,29 @@ export default function ContactSection() {
               <div>
                 <h2 className="text-2xl font-bold mb-0">Write me</h2>
                 <h2 className="text-lg font-bold mb-0">
-                  Let's discuss your next project
+                  {Details.ProfileSubtitle}
                 </h2>
               </div>
             </div>
 
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3">
-                <IoLogoWhatsapp className="text-yellow-300 text-2xl" />
+                <Details.githubIcon className="text-yellow-300 text-2xl" />
                 <span className="text-gray-300 text-sm">{Details.phone}</span>
               </div>
               <div className="flex items-center gap-3">
-                <Email className="text-yellow-300 text-2xl" />
+                <Details.emailIcon className="text-yellow-300 text-2xl" />
                 <span className="text-gray-300 text-sm break-all">
                   {Details.email}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <LocationOn className="text-yellow-300 text-2xl" />
+                <Details.emailIcon className="text-yellow-300 text-2xl" />
                 <span className="text-gray-300 text-sm">{Details.address}</span>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mb-8">Follow us</h3>
+            <h3 className="text-2xl font-bold mb-8">{Details.Follow}</h3>
             <Socialicons />
           </motion.div>
 
@@ -131,7 +140,7 @@ export default function ContactSection() {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <h2 className="text-2xl font-bold mb-8">Or fill this form</h2>
+            <h2 className="text-2xl font-bold mb-8">{Details.FormHeading}</h2>
             <form ref={form} className="space-y-8" onSubmit={sendEmail}>
               <TextField
                 label="Name"
@@ -200,7 +209,7 @@ export default function ContactSection() {
                 }}
               />
 
-              <Button
+              {/* <Button
                 type="submit"
                 className="gap-x-2 !px-8 !py-3"
                 sx={{
@@ -211,7 +220,22 @@ export default function ContactSection() {
                 }}
               >
                 Send <IoIosSend fontSize="large" />
-              </Button>
+              </Button> */}
+               <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
+                  {/* Circle */}
+                  <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
+                    {/* Arrow line */}
+                    <span className="absolute left-3.5 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
+                      {/* Arrow head */}
+                      <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
+                    </span>
+                  </span>
+
+                  {/* Button Text */}
+                  <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
+                    {Details.SubmitBtnText}
+                  </span>
+                </button>
             </form>
           </motion.div>
         </div>

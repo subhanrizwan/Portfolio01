@@ -17,7 +17,6 @@ const Details = {
   description:
     "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
   ResumeButton: "Resume",
-  ToolTip: "Click to Download",
 };
 
 export default function HeroSection() {
@@ -106,7 +105,6 @@ export default function HeroSection() {
                 },
               }}
             >
-              <Tooltip title={Details.ToolTip}>
                 <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
                   {/* Circle */}
                   <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
@@ -122,7 +120,6 @@ export default function HeroSection() {
                     {Details.ResumeButton}
                   </span>
                 </button>
-              </Tooltip>
             </motion.div>
 
             <motion.p
