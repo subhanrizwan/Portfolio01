@@ -3,7 +3,7 @@
 import { motion } from "framer-motion"
 import Heading from "./Heading"
 
-export default function SkillsSection() {
+// Technical Skills Data
   const technicalSkills = [
     { name: "HTML/CSS", percentage: 95 },
     { name: "JavaScript", percentage: 85 },
@@ -11,6 +11,8 @@ export default function SkillsSection() {
     { name: "Tailwind", percentage: 90 },
     { name: "Bootstrap", percentage: 80 },
   ]
+
+export default function SkillsSection() {
 
   // animation variants
   const fadeInUp = {

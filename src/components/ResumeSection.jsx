@@ -2,27 +2,28 @@
 import { motion } from "framer-motion";
 import Heading from "./Heading.jsx";
 
+// Experience Information
+const resumeData = [
+  {
+    id: 1,
+    company: "TechWave Solutions",
+    position: "Frontend Developer",
+    duration: "01/2023 - 12/2023",
+  },
+  {
+    id: 2,
+    company: "Creative Minds Agency",
+    position: "React.js Developer",
+    duration: "02/2024 - 07/2024",
+  },
+  {
+    id: 3,
+    company: "PixelCraft Studio",
+    position: "Web Developer Intern",
+    duration: "08/2024 - Present",
+  },
+];
 export default function ResumeSection() {
-  const resumeData = [
-    {
-      id: 1,
-      company: "TechWave Solutions",
-      position: "Frontend Developer",
-      duration: "01/2023 - 12/2023",
-    },
-    {
-      id: 2,
-      company: "Creative Minds Agency",
-      position: "React.js Developer",
-      duration: "02/2024 - 07/2024",
-    },
-    {
-      id: 3,
-      company: "PixelCraft Studio",
-      position: "Web Developer Intern",
-      duration: "08/2024 - Present",
-    },
-  ];
 
   // animation variants
   const fadeInUp = {
@@ -53,7 +54,7 @@ export default function ResumeSection() {
             {/* Experience Item 1 */}
             {resumeData.map((item) => (
               <motion.div
-                className="relative flex items-center hover:scale-[1.02] duration-[0.8s]"
+                className="relative flex items-center hover:!scale-[1.02] duration-[0.8s]"
                 variants={fadeInUp}
                 initial="hidden"
                 whileInView="visible"

@@ -9,7 +9,7 @@ import GridViewIcon from "@mui/icons-material/GridView";
 import ScreenshotMonitorIcon from "@mui/icons-material/ScreenshotMonitor";
 import { motion } from "framer-motion";
 
-export default function AboutSection() {
+  // Services Offered
   const services = [
     {
       icon: <FlipToFrontIcon className="w-8 h-8" />,
@@ -45,6 +45,8 @@ export default function AboutSection() {
       description: "Company profile & services websites",
     },
   ];
+
+export default function AboutSection() {
 
   return (
     <section

@@ -1,11 +1,11 @@
 "use client";
-import { Link, TextField, Button } from "@mui/material";
-import Image from "../assets/images/profile.png";
-import Socialicons from "../components/SocialIcon.jsx";
-import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { Phone, Email, LocationOn } from "@mui/icons-material";
 import { IoLogoWhatsapp, IoIosSend } from "react-icons/io";
+import { Link, TextField, Button } from "@mui/material";
+import Socialicons from "../components/SocialIcon.jsx";
+import Image from "../assets/images/profile.png";
+import { useRef, useState } from "react";
+import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
@@ -15,13 +15,12 @@ export default function ContactSection() {
   const [message, setMessage] = useState("");
 
   const Details = {
-    name: "I am John Doe",
-    position: "Web Developer",
     phone: "+00 123 4567890",
     email: "example@email.com",
     address: "Your City, Country",
-    description:
-      "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS...",
+    github: "https://github.com/yourusername",
+    linkedin: "https://linkedin.com/in/yourusername",
+    email: "example@email.com"
   };
 
   const form = useRef();
@@ -56,7 +55,11 @@ export default function ContactSection() {
   // Animation Variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+    visible: {
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, ease: "easeOut" },
+    },
   };
 
   return (
@@ -65,14 +68,22 @@ export default function ContactSection() {
       className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
     >
       {/* Decorative circles */}
-      <div className="absolute top-10 left-4 w-20 h-20 bg-yellow-400/30 rounded-full opacity-60 animate-bounce" style={{ animationDuration: "3s" }} />
-      <div className="absolute bottom-10 right-4 w-16 h-16 bg-yellow-300/40 rounded-full opacity-60 animate-bounce delay-1000" style={{ animationDuration: "3s" }} />
-      <div className="absolute top-1/2 left-2 w-12 h-12 bg-yellow-500/20 rounded-full opacity-50 animate-bounce" style={{ animationDuration: "4s" }} />
+      <div
+        className="absolute top-10 left-4 w-20 h-20 bg-yellow-400/30 rounded-full opacity-60 animate-bounce"
+        style={{ animationDuration: "3s" }}
+      />
+      <div
+        className="absolute bottom-10 right-4 w-16 h-16 bg-yellow-300/40 rounded-full opacity-60 animate-bounce delay-1000"
+        style={{ animationDuration: "3s" }}
+      />
+      <div
+        className="absolute top-1/2 left-2 w-12 h-12 bg-yellow-500/20 rounded-full opacity-50 animate-bounce"
+        style={{ animationDuration: "4s" }}
+      />
       <div className="absolute top-1/4 right-2 w-8 h-8 bg-yellow-400/25 rounded-full opacity-40 animate-pulse delay-500" />
 
       <div className="max-w-7xl mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-
           {/* Left Info */}
           <motion.div
             variants={fadeInUp}
@@ -99,7 +110,9 @@ export default function ContactSection() {
               </div>
               <div className="flex items-center gap-3">
                 <Email className="text-yellow-300 text-2xl" />
-                <span className="text-gray-300 text-sm break-all">{Details.email}</span>
+                <span className="text-gray-300 text-sm break-all">
+                  {Details.email}
+                </span>
               </div>
               <div className="flex items-center gap-3">
                 <LocationOn className="text-yellow-300 text-2xl" />
@@ -132,7 +145,10 @@ export default function ContactSection() {
                   sx: { borderBottom: "1px solid #4b5563", color: "white" },
                 }}
                 InputLabelProps={{
-                  sx: { color: "#9ca3af", "&.Mui-focused": { color: "#facc15" } },
+                  sx: {
+                    color: "#9ca3af",
+                    "&.Mui-focused": { color: "#facc15" },
+                  },
                 }}
               />
               <TextField
@@ -148,7 +164,10 @@ export default function ContactSection() {
                   sx: { borderBottom: "1px solid #4b5563", color: "white" },
                 }}
                 InputLabelProps={{
-                  sx: { color: "#9ca3af", "&.Mui-focused": { color: "#facc15" } },
+                  sx: {
+                    color: "#9ca3af",
+                    "&.Mui-focused": { color: "#facc15" },
+                  },
                 }}
               />
               <TextField
@@ -160,12 +179,27 @@ export default function ContactSection() {
                 rows={8}
                 fullWidth
                 InputProps={{
-                  sx: { color: "white", "& .MuiOutlinedInput-notchedOutline": { borderColor: "#4b5563" } },
+                  sx: {
+                    color: "#4b5563",
+                    "& .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "#4b5563", 
+                    },
+                    "&:hover .MuiOutlinedInput-notchedOutline": {
+                      borderColor: "#4b5563", 
+                    },
+                    "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+                      border: " 1px solid #4b5563"
+                    },
+                  },
                 }}
                 InputLabelProps={{
-                  sx: { color: "#9ca3af", "&.Mui-focused": { color: "#facc15" } },
+                  sx: {
+                    color: "#9ca3af",
+                    "&.Mui-focused": { color: "#facc15" }, // label ka color focus par yellow
+                  },
                 }}
               />
+
               <Button
                 type="submit"
                 className="gap-x-2 !px-8 !py-3"
@@ -192,18 +226,22 @@ export default function ContactSection() {
         >
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="text-gray-400 mb-4 md:mb-0">
-              © {new Date().getFullYear()} <span className="font-semibold">John Doe</span> — All rights reserved.
+              © {new Date().getFullYear()}{" "}
+              <span className="font-semibold">John Doe</span> — All rights
+              reserved.
             </div>
             <p className="flex gap-x-3 cursor-pointer">
-              {["Home", "About", "Skills", "Portfolio", "Contact"].map((data) => (
-                <Link
-                  key={data}
-                  onClick={() => scrollToSection(data.toLowerCase())}
-                  className="!text-gray-400 !no-underline hover:!text-yellow-300 duration-300"
-                >
-                  {data}
-                </Link>
-              ))}
+              {["Home", "About", "Skills", "Portfolio", "Contact"].map(
+                (data) => (
+                  <Link
+                    key={data}
+                    onClick={() => scrollToSection(data.toLowerCase())}
+                    className="!text-gray-400 !no-underline hover:!text-yellow-300 duration-300"
+                  >
+                    {data}
+                  </Link>
+                )
+              )}
             </p>
           </div>
         </motion.div>

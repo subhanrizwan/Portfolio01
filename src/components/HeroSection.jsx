@@ -1,21 +1,23 @@
 "use client";
 import Rectangle from "./Rectangle";
 import Image from "../assets/images/profile.png";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { Email, LocationOn } from "@mui/icons-material";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
+import { Tooltip } from "@mui/material";
 
+// Personal Details
 const Details = {
   welcome: "console.log('Welcome to my Portfolio!')",
   name: "I am John Doe",
   ima: "Creative ",
-  position: "Web Developer",
-  phone: "+00 123 4567890",
-  email: "example@email.com",
-  address: "Your City, Country",
+  position1: "Web Developer",
+  position2: "React Js Developer",
+  position3: "Freelancer",
+  ProfileImage: Image,
   description:
     "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
+  ResumeButton: "Resume",
+  ToolTip: "Click to Download",
 };
 
 export default function HeroSection() {
@@ -38,7 +40,6 @@ export default function HeroSection() {
 
       <div className="container mx-auto px-4 md:px-6 py-10 md:py-20 relative z-10">
         <div className="grid lg:grid-cols-2 gap-8 md:gap-16 items-center min-h-[80vh]">
-          
           {/* Left Content */}
           <motion.div
             className="order-2 lg:order-1 text-start lg:text-left lg:ml-20 px-4"
@@ -60,7 +61,7 @@ export default function HeroSection() {
             </motion.div>
 
             <motion.h1
-              className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4 text-white"
+              className="text-[0.9em] md:text-[1em] font-bold mb-4 text-white"
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: 0.3 }}
@@ -75,18 +76,18 @@ export default function HeroSection() {
               transition={{ duration: 0.8, delay: 0.5 }}
             >
               {Details.ima}{" "}
-              <span className="text-yellow-300">
+              <span className="text-yellow-300 text-[0.9em] md:text-[1em]">
                 <TypeAnimation
                   sequence={[
-                    "Web Developer",
+                    Details.position1,
                     1200,
-                    "React Js Developer",
+                    Details.position2,
                     1200,
-                    "Frontend Engineer",
-                    1200,
+                    Details.position3,
+                    1200
                   ]}
                   speed={50}
-                  style={{ fontSize: "1em" }}
+                  // style={{ fontSize: "1em" }}
                   repeat={Infinity}
                 />
               </span>
@@ -105,29 +106,27 @@ export default function HeroSection() {
                 },
               }}
             >
-              {[
-                { icon: <IoLogoWhatsapp className="text-yellow-300 text-2xl" />, text: Details.phone },
-                { icon: <Email className="text-yellow-300 text-2xl" />, text: Details.email },
-                { icon: <LocationOn className="text-yellow-300 text-2xl" />, text: Details.address },
-              ].map((item, i) => (
-                <motion.div
-                  key={i}
-                  className="flex items-center gap-3"
-                  variants={{
-                    hidden: { opacity: 0, x: -40 },
-                    visible: { opacity: 1, x: 0 },
-                  }}
-                >
-                  {item.icon}
-                  <span className="text-gray-300 text-sm md:text-sm">
-                    {item.text}
+              <Tooltip title={Details.ToolTip}>
+                <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
+                  {/* Circle */}
+                  <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
+                    {/* Arrow line */}
+                    <span className="absolute left-3.5 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
+                      {/* Arrow head */}
+                      <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
+                    </span>
                   </span>
-                </motion.div>
-              ))}
+
+                  {/* Button Text */}
+                  <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
+                    {Details.ResumeButton}
+                  </span>
+                </button>
+              </Tooltip>
             </motion.div>
 
             <motion.p
-              className="text-gray-400 leading-relaxed text-sm md:text-base max-w-lg mx-auto lg:mx-0"
+              className="text-gray-400 !text-left leading-relaxed text-sm md:text-base lg:mx-0"
               initial={{ opacity: 0 }}
               whileInView={{ opacity: 1 }}
               transition={{ duration: 2, delay: 0.6 }}
@@ -154,7 +153,7 @@ export default function HeroSection() {
                 transition={{ duration: 4, repeat: Infinity }}
               >
                 <img
-                  src={Image}
+                  src={Details.ProfileImage}
                   alt="John Doe"
                   className="w-full h-full object-contain rounded-2xl"
                 />
