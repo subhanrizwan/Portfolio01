@@ -1,8 +1,8 @@
-"use client";
+;
 import { motion } from "framer-motion";
 import Heading from "./Heading";
 
-// Education Information
+// Customize your education details
 const educationData = [
   {
     id: 1,

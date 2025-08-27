@@ -1,11 +1,10 @@
-"use client";
 import Rectangle from "./Rectangle";
 import Image from "../assets/images/profile.png";
 import { TypeAnimation } from "react-type-animation";
 import { motion } from "framer-motion";
 import { Tooltip } from "@mui/material";
 
-// Personal Details
+// Customize your personal details
 const Details = {
   welcome: "console.log('Welcome to my Portfolio!')",
   name: "I am John Doe",

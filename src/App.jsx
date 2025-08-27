@@ -1,4 +1,3 @@
-"use client"
 import Navigation from "./components/Navigation.jsx"
 import HeroSection from "./components/HeroSection.jsx"
 import AboutSection from "./components/AboutSection.jsx"

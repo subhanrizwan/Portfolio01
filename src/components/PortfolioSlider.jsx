@@ -1,21 +1,22 @@
-import React from 'react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 import { Swiper, SwiperSlide } from 'swiper/react';
-// Import Swiper styles
-import 'swiper/css';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
-import './style.css';
 import PortfolioCard from './PortfolioCard';
-
 import proj1 from "../assets/images/proj1.png";
 import proj2 from "../assets/images/proj2.png";
 import proj3 from "../assets/images/proj3.png";
 import proj4 from "../assets/images/proj4.png";
 import proj5 from "../assets/images/proj5.png";
 import proj6 from "../assets/images/proj6.png";
+// Import Swiper styles
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';  
+import 'swiper/css';
+import './style.css';
+
 
 export default function PortfolioSlider() {
+
+  // Customize your portfolio projects
   const portfolioData = [
     {
       id: 1,
@@ -88,7 +89,6 @@ export default function PortfolioSlider() {
       spaceBetween: 10,
     },
   }}
-      // pagination={{ clickable: true }}
     >
       {portfolioData.map((item) => (
         <SwiperSlide key={item.id}>

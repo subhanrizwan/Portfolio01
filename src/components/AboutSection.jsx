@@ -1,4 +1,4 @@
-"use client";
+;
 
 import Heading from "./Heading";
 import FlipToFrontIcon from "@mui/icons-material/FlipToFront";

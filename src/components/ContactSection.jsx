@@ -1,11 +1,10 @@
-"use client";
+;
 import { Phone, Email, LocationOn } from "@mui/icons-material";
-import { IoLogoWhatsapp, IoIosSend } from "react-icons/io";
+import { IoLogoWhatsapp } from "react-icons/io";
 import { Link, TextField, Button } from "@mui/material";
 import Socialicons from "../components/SocialIcon.jsx";
 import Image from "../assets/images/profile.png";
 import { useRef, useState } from "react";
-import emailjs from "@emailjs/browser";
 import { motion } from "framer-motion";
 
 export default function ContactSection() {
@@ -14,45 +13,23 @@ export default function ContactSection() {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
+  // Customize your contact details
   const Details = {
     ProfileImage: Image,
     Profiletitle: "Write me",
     ProfileSubtitle: "Let's discuss your next project",
-    phone: "+00 123 4567890",
+    WhatsappIcon: <Phone className="text-yellow-300 text-2xl" />,
+    whatsapp: "+00 123 4567890",
+    EmailIcon: <Email className="text-yellow-300 text-2xl" />,
     email: "example@email.com",
+    LocationIcon: <LocationOn className="text-yellow-300 text-2xl" />,
     address: "Your City, Country",
-    githubIcon: <IoLogoWWhatsapp />,
-    github: "https://github.com/yourusername",
-    linkedinIcon: <IoLogoWhatsapp />,
-    linkedin: "https://linkedin.com/in/yourusername",
-    emailIcon: <IoLogoWhatsapp />,
-    email: "example@email.com",
     Follow: "Follow us",
     FormHeading: "Or fill this form",
-    SubmitBtnText: "Send"
+    SubmitBtnText: "Send",
   };
 
   const form = useRef();
-
-  const sendEmail = (e) => {
-    e.preventDefault();
-    emailjs
-      .sendForm("service_qu0z6wr", "template_xq9hs4o", form.current, {
-        publicKey: "Bym6hQFgTyWWzhc95",
-      })
-      .then(
-        () => {
-          console.log("SUCCESS!");
-          setName("");
-          setEmail("");
-          setPhone("");
-          setMessage("");
-        },
-        (error) => {
-          console.log("FAILED...", error.text);
-        }
-      );
-  };
 
   const scrollToSection = (sectionId) => {
     const element = document.getElementById(sectionId);
@@ -102,10 +79,12 @@ export default function ContactSection() {
           >
             <div className="flex items-center gap-x-6 mb-8">
               <div className="w-24 h-24 bg-yellow-300 rounded-full flex justify-center items-center overflow-hidden">
-                <img src={Image} alt="John Doe" />
+                <img src={Details.ProfileImage} alt="John Doe" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold mb-0">Write me</h2>
+                <h2 className="text-2xl font-bold mb-0">
+                  {Details.Profiletitle}
+                </h2>
                 <h2 className="text-lg font-bold mb-0">
                   {Details.ProfileSubtitle}
                 </h2>
@@ -114,17 +93,19 @@ export default function ContactSection() {
 
             <div className="space-y-3 mb-8">
               <div className="flex items-center gap-3">
-                <Details.githubIcon className="text-yellow-300 text-2xl" />
-                <span className="text-gray-300 text-sm">{Details.phone}</span>
+                {Details.WhatsappIcon}
+                <span className="text-gray-300 text-sm">
+                  {Details.whatsapp}
+                </span>
               </div>
               <div className="flex items-center gap-3">
-                <Details.emailIcon className="text-yellow-300 text-2xl" />
+                {Details.EmailIcon}
                 <span className="text-gray-300 text-sm break-all">
                   {Details.email}
                 </span>
               </div>
               <div className="flex items-center gap-3">
-                <Details.emailIcon className="text-yellow-300 text-2xl" />
+                {Details.LocationIcon}
                 <span className="text-gray-300 text-sm">{Details.address}</span>
               </div>
             </div>
@@ -141,7 +122,7 @@ export default function ContactSection() {
             viewport={{ once: false, amount: 0.3 }}
           >
             <h2 className="text-2xl font-bold mb-8">{Details.FormHeading}</h2>
-            <form ref={form} className="space-y-8" onSubmit={sendEmail}>
+            <form ref={form} className="space-y-8">
               <TextField
                 label="Name"
                 name="name"
@@ -191,13 +172,13 @@ export default function ContactSection() {
                   sx: {
                     color: "#4b5563",
                     "& .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#4b5563", 
+                      borderColor: "#4b5563",
                     },
                     "&:hover .MuiOutlinedInput-notchedOutline": {
-                      borderColor: "#4b5563", 
+                      borderColor: "#4b5563",
                     },
                     "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
-                      border: " 1px solid #4b5563"
+                      border: " 1px solid #4b5563",
                     },
                   },
                 }}
@@ -221,21 +202,21 @@ export default function ContactSection() {
               >
                 Send <IoIosSend fontSize="large" />
               </Button> */}
-               <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
-                  {/* Circle */}
-                  <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
-                    {/* Arrow line */}
-                    <span className="absolute left-3.5 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
-                      {/* Arrow head */}
-                      <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
-                    </span>
+              <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
+                {/* Circle */}
+                <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
+                  {/* Arrow line */}
+                  <span className="absolute left-3.5 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
+                    {/* Arrow head */}
+                    <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
                   </span>
+                </span>
 
-                  {/* Button Text */}
-                  <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
-                    {Details.SubmitBtnText}
-                  </span>
-                </button>
+                {/* Button Text */}
+                <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
+                  {Details.SubmitBtnText}
+                </span>
+              </button>
             </form>
           </motion.div>
         </div>

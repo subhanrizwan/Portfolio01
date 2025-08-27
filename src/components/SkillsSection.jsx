@@ -1,9 +1,9 @@
 
-"use client"
+
 import { motion } from "framer-motion"
 import Heading from "./Heading"
 
-// Technical Skills Data
+// Customize your technical skills
   const technicalSkills = [
     { name: "HTML/CSS", percentage: 95 },
     { name: "JavaScript", percentage: 85 },

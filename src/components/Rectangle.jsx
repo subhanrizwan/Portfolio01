@@ -1,6 +1,5 @@
 const Rectangle = () => {
   return (
-    // <>
       <span
         className="
     title-icon w-[21px] h-[14px] relative
@@ -8,7 +7,6 @@ const Rectangle = () => {
     after:content-[''] after:absolute after:w-[14px] after:h-[14px] after:rounded-full after:border-2 after:border-yellow-300  after:bg-yellow-300 after:top-0 after:right-0 after:transition-all after:animate-moveRight
   "
       ></span>
-    // </>
   );
 };
 

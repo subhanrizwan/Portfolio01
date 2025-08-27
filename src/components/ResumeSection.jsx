@@ -1,8 +1,8 @@
-"use client";
+;
 import { motion } from "framer-motion";
 import Heading from "./Heading.jsx";
 
-// Experience Information
+// Customize your work experience
 const resumeData = [
   {
     id: 1,

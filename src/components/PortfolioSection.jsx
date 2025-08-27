@@ -1,4 +1,4 @@
-"use client";
+;
 import PortfolioSlider from "./PortfolioSlider";
 import proj1 from "../assets/images/proj1.png";
 import proj2 from "../assets/images/proj2.png";

@@ -1,7 +1,7 @@
-"use client";
 import { IconButton, Tooltip } from "@mui/material";
 import { IoMdEye } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
+
 function PortfolioCard({ item }) {
   return (
     <>
