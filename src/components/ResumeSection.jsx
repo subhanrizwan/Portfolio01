@@ -1,4 +1,3 @@
-;
 import { motion } from "framer-motion";
 import Heading from "./Heading.jsx";
 
@@ -36,8 +35,8 @@ export default function ResumeSection() {
   };
 
   return (
-    <section className="py-12 md:py-20 px-4 md:px-6 lg:px-12 bg-gradient-to-b from-black via-yellow-500/10 to-black">
-      <div className="max-w-7xl mx-auto">
+    <section className="px-4 py-12 md:py-20 md:px-6 lg:px-12 bg-gradient-to-b from-black via-yellow-500/10 to-black">
+      <div className="mx-auto max-w-7xl">
         {/* Heading with animation */}
         <motion.div
           initial="hidden"
@@ -59,19 +58,20 @@ export default function ResumeSection() {
                 initial="hidden"
                 whileInView="visible"
                 viewport={{ once: false, amount: 0.3 }}
+                key={item.id}
               >
                 <div className="flex-1">
-                  <div className="flex justify-between items-center flex-wrap backdrop-blur-10 bg-white/10 border border-white/10 p-6 lg:p-8 rounded-lg shadow-lg text-left">
+                  <div className="flex flex-wrap items-center justify-between p-6 text-left border rounded-lg shadow-lg backdrop-blur-10 bg-white/10 border-white/10 lg:p-8">
                     <div>
-                      <p className="text-yellow-300 font-medium mb-3">
+                      <p className="mb-3 font-medium text-yellow-300">
                         {item.company}
                       </p>
-                      <h3 className="text-xl lg:text-2xl font-bold mb-2 text-white mt-2">
+                      <h3 className="mt-2 mb-2 text-xl font-bold text-white lg:text-2xl">
                         {item.position}
                       </h3>
                     </div>
                     <div>
-                      <span className="text-yellow-300 text-sm font-medium">
+                      <span className="text-sm font-medium text-yellow-300">
                         {item.duration}
                       </span>
                     </div>

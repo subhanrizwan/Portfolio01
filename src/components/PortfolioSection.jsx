@@ -61,13 +61,13 @@ export default function PortfolioSection() {
   return (
     <motion.section
       id="portfolio"
-      className="py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+      className="px-6 py-12 md:py-20 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
       initial={{ opacity: 0, y: 100 }}      
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: false }}  
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
         {/* Heading */}
         <motion.div
           initial={{ opacity: 0, y: 50 }}
@@ -84,7 +84,7 @@ export default function PortfolioSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
         >
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
             {portfolioData.map((item, index) => (
               <motion.div
                 key={item.id}

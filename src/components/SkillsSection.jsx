@@ -1,5 +1,4 @@
 
-
 import { motion } from "framer-motion"
 import Heading from "./Heading"
 
@@ -23,10 +22,9 @@ export default function SkillsSection() {
   return (
     <section
       id="skills"
-      className="py-12 md:py-20 px-6 md:px-12 lg:px-24 
-                 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+      className="px-6 py-12 md:py-20 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
     >
-      <div className="max-w-7xl mx-auto">
+      <div className="mx-auto max-w-7xl">
            <motion.div
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,7 +34,7 @@ export default function SkillsSection() {
         <Heading Skills={"The Stack I Master"} />
 
         {/* Technical Skills - Circular Progress */}
-        <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-0">
+        <div className="grid grid-cols-2 gap-8 mb-0 md:grid-cols-5">
           {technicalSkills.map((skill, index) => (
             <motion.div
               key={index}
@@ -83,7 +81,7 @@ export default function SkillsSection() {
                   <span className="text-lg font-bold">{skill.percentage}%</span>
                 </div>
               </div>
-              <h3 className="text-white font-medium">{skill.name}</h3>
+              <h3 className="font-medium text-white">{skill.name}</h3>
             </motion.div>
           ))}
         </div>
