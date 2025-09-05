@@ -1,7 +1,7 @@
-import Rectangle from "./Rectangle";
-import Image from "../assets/images/profile.png";
 import { TypeAnimation } from "react-type-animation";
-import {motion} from "framer-motion";
+import Image from "../assets/images/profile.png";
+import { motion } from "framer-motion";
+import Rectangle from "./Rectangle";
 
 // Customize your personal details
 const Details = {
@@ -15,7 +15,7 @@ const Details = {
   description:
     "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
   ResumeButton: "Resume",
-  ResumeLink:'/public/SubhanAhmed.pdf'
+  ResumeLink: "/public/SubhanAhmed.pdf",
 };
 
 export default function HeroSection() {
@@ -82,7 +82,7 @@ export default function HeroSection() {
                     Details.position2,
                     1200,
                     Details.position3,
-                    1200
+                    1200,
                   ]}
                   speed={50}
                   repeat={Infinity}
@@ -92,7 +92,7 @@ export default function HeroSection() {
 
             {/* Personal Information with stagger */}
             <motion.div
-            onClick={()=>window.open(Details.ResumeLink,'_blank')}
+              onClick={() => window.open(Details.ResumeLink, "_blank")}
               className="mb-6 space-y-3 md:space-y-4 md:mb-8"
               initial="hidden"
               whileInView="visible"
@@ -104,22 +104,21 @@ export default function HeroSection() {
                 },
               }}
             >
-                <button className="relative inline-block p-0 bg-transparent border-0 cursor-pointer font-inherit group">
-                  {/* Circle */}
-                  <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
-                    {/* Arrow line */}
-                    <span className="absolute left-3 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
-                      {/* Arrow head */}
-                      <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
-                    </span>
+              <button className="relative inline-block p-0 bg-transparent border-0 cursor-pointer font-inherit group">
+                {/* Circle */}
+                <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
+                  {/* Arrow line */}
+                  <span className="absolute left-3 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
+                    {/* Arrow head */}
+                    <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
                   </span>
+                </span>
 
-                  {/* Button Text */}
-                  <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
-                    {Details.ResumeButton}
-                  </span>
-                </button>
-                
+                {/* Button Text */}
+                <span className="absolute inset-0 ml-24 text-sm flex items-center justify-center font-bold uppercase tracking-wide text-white whitespace-nowrap transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:text-black">
+                  {Details.ResumeButton}
+                </span>
+              </button>
             </motion.div>
 
             <motion.p

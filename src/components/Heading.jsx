@@ -1,4 +1,5 @@
 import Rectangle from "./Rectangle.jsx";
+
 const Heading = ({ Resume, Portfolio, Skills, Services, Education }) => {
   return (
     <>

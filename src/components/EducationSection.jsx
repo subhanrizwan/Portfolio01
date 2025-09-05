@@ -1,5 +1,5 @@
-import Heading from "./Heading";
 import { motion } from "framer-motion";
+import Heading from "./Heading";
 
 // Customize your education details
 const educationData = [

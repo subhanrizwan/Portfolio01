@@ -1,6 +1,5 @@
 import { Link, IconButton } from "@mui/material";
-import { IoLogoGithub } from "react-icons/io";
-import { IoLogoLinkedin } from "react-icons/io";
+import { IoLogoLinkedin, IoLogoGithub } from "react-icons/io";
 import { LuMails } from "react-icons/lu";
 
 // Customize your social media links

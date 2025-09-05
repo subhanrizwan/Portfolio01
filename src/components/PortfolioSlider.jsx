@@ -1,12 +1,10 @@
 import { Navigation, Pagination, Autoplay } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
-import PortfolioCard from "./PortfolioCard";
-import proj1 from "../assets/images/proj1.png";
-import proj2 from "../assets/images/proj2.png";
 import proj3 from "../assets/images/proj3.png";
-import proj4 from "../assets/images/proj4.png";
-import proj5 from "../assets/images/proj5.png";
-import proj6 from "../assets/images/proj6.png";
+import PortfolioCard from "./PortfolioCard";
+import { IoMdEye } from "react-icons/io";
+import { FaCode } from "react-icons/fa";
+
 // Import Swiper styles
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -19,16 +17,20 @@ export default function PortfolioSlider() {
     {
       id: 1,
       title: "Project 1",
-      image: proj1,
+      image: proj3,
       demo: "https://demo1.com",
       git: "https://github.com/demo1",
+      githubIcon: <FaCode fontSize={"medium"} />,
+      demoIcon: <IoMdEye fontSize={"medium"} />,
     },
     {
       id: 2,
       title: "Project 2",
-      image: proj2,
+      image: proj3,
       demo: "https://demo2.com",
       git: "https://github.com/demo2",
+      githubIcon: <FaCode fontSize={"medium"} />,
+      demoIcon: <IoMdEye fontSize={"medium"} />,
     },
     {
       id: 3,
@@ -36,27 +38,8 @@ export default function PortfolioSlider() {
       image: proj3,
       demo: "https://demo3.com",
       git: "https://github.com/demo3",
-    },
-    {
-      id: 4,
-      title: "Project 4",
-      image: proj4,
-      demo: "https://demo4.com",
-      git: "https://github.com/demo4",
-    },
-    {
-      id: 5,
-      title: "Project 5",
-      image: proj5,
-      demo: "https://demo5.com",
-      git: "https://github.com/demo5",
-    },
-    {
-      id: 6,
-
-      image: proj6,
-      demo: "https://demo6.com",
-      git: "https://github.com/demo6",
+      githubIcon: <FaCode fontSize={"medium"} />,
+      demoIcon: <IoMdEye fontSize={"medium"} />,
     },
   ];
 

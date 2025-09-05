@@ -1,10 +1,5 @@
 import PortfolioSlider from "./PortfolioSlider";
-import proj1 from "../assets/images/proj1.png";
-import proj2 from "../assets/images/proj2.png";
 import proj3 from "../assets/images/proj3.png";
-import proj4 from "../assets/images/proj4.png";
-import proj5 from "../assets/images/proj5.png";
-import proj6 from "../assets/images/proj6.png";
 import PortfolioCard from "./PortfolioCard";
 import { IoMdEye } from "react-icons/io";
 import { FaCode } from "react-icons/fa";
@@ -15,7 +10,7 @@ import Heading from "./Heading";
 const portfolioData = [
   {
     id: 1,
-    image: proj1,
+    image: proj3,
     title: "Project 1",
     demo: "https://demo1.com",
     git: "https://github.com/demo1",
@@ -24,7 +19,7 @@ const portfolioData = [
   },
   {
     id: 2,
-    image: proj2,
+    image: proj3,
     title: "Project 2",
     demo: "https://demo2.com",
     git: "https://github.com/demo2",
@@ -37,33 +32,6 @@ const portfolioData = [
     title: "Project 3",
     demo: "https://demo3.com",
     git: "https://github.com/demo3",
-    githubIcon: <FaCode fontSize={"medium"} />,
-    demoIcon: <IoMdEye fontSize={"medium"} />,
-  },
-  {
-    id: 4,
-    image: proj4,
-    title: "Project 4",
-    demo: "https://demo4.com",
-    git: "https://github.com/demo4",
-    githubIcon: <FaCode fontSize={"medium"} />,
-    demoIcon: <IoMdEye fontSize={"medium"} />,
-  },
-  {
-    id: 5,
-    image: proj5,
-    title: "Project 5",
-    demo: "https://demo5.com",
-    git: "https://github.com/demo5",
-    githubIcon: <FaCode fontSize={"medium"} />,
-    demoIcon: <IoMdEye fontSize={"medium"} />,
-  },
-  {
-    id: 6,
-    image: proj6,
-    title: "Project 6",
-    demo: "https://demo6.com",
-    git: "https://github.com/demo6",
     githubIcon: <FaCode fontSize={"medium"} />,
     demoIcon: <IoMdEye fontSize={"medium"} />,
   },

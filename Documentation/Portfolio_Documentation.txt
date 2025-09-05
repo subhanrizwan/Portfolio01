@@ -23,7 +23,7 @@ and a clean design. Deployed on Netlify, it works smoothly on both desktop and m
 
 📂 Folder Structure
 portfolio/
-│── Documentation/        # Project documentation files (PDF/TXT)
+│── Documentation/        # Project documentation files (TXT)
 │── node_modules/         # Dependencies
 │── public/
 │   └── JohnDoe.pdf       # Resume file
@@ -89,6 +89,9 @@ portfolio/
 
 ------------------------------------------------------------
 
-👤 Author
-Subhan Ahmed
-📧 developersubhanahmed@gmail.com
+🛠️ Extra Setup (Favicon & Google Font)
+- Favicon: Replace the favicon file at  
+  `src/assets/images/boy.png` with your own image.  
+  The reference is added in `index.html`:
+  ```html
+  <link rel="icon" type="image/svg+xml" href="./src/assets/images/boy.png" />

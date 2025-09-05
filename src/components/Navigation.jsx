@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 
 export default function Navigation() {
@@ -31,15 +30,17 @@ export default function Navigation() {
       {mobileMenuOpen && (
         <div className="fixed inset-0 flex items-center justify-center bg-black/90 -z-40">
           <div className="space-y-8 text-center">
-            {["Home", "Services", "Skills", "Portfolio", "Contact"].map((item) => (
-              <button
-                key={item}
-                onClick={() => scrollToSection(item.toLowerCase())}
-                className="block text-2xl text-white hover:text-yellow-300 hover:duration-[0.5s] hover:translate-x-5 transition duration-[0.5s] relative before:absolute before:-translate-x-4 before:translate-y-[0.85rem] before:hidden hover:before:block before:w-2 before:h-2 before:bg-yellow-400 before:rounded-full"
-              >
-                {item}
-              </button>
-            ))}
+            {["Home", "Services", "Skills", "Portfolio", "Contact"].map(
+              (item) => (
+                <button
+                  key={item}
+                  onClick={() => scrollToSection(item.toLowerCase())}
+                  className="block text-2xl text-white hover:text-yellow-300 hover:duration-[0.5s] hover:translate-x-5 transition duration-[0.5s] relative before:absolute before:-translate-x-4 before:translate-y-[0.85rem] before:hidden hover:before:block before:w-2 before:h-2 before:bg-yellow-400 before:rounded-full"
+                >
+                  {item}
+                </button>
+              )
+            )}
           </div>
         </div>
       )}

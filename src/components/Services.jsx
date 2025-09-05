@@ -60,7 +60,7 @@ export default function AboutSection() {
         >
           <Heading Services={"How I Can Help"} />
 
-          <div className="grid grid-cols-1 gap-8 cursor-pointer md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid grid-cols-1 gap-8 mt-6 cursor-pointer md:grid-cols-2 lg:grid-cols-3">
             {services.map((service, index) => (
               <motion.div
                 key={index}

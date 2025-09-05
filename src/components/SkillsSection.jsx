@@ -38,7 +38,7 @@ export default function SkillsSection() {
           <Heading Skills={"The Stack I Master"} />
 
           {/* Technical Skills - Circular Progress */}
-          <div className="grid grid-cols-2 gap-0 mb-0 md:grid-cols-6">
+          <div className="grid grid-cols-2 gap-0 mt-6 mb-0 md:grid-cols-6">
             {technicalSkills.map((skill, index) => (
               <motion.div
                 key={index}

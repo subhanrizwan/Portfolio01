@@ -1,9 +1,9 @@
 import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
-import { Link, TextField } from "@mui/material";
+import Socialicons from "../components/SocialIcon.jsx";
 import Image from "../assets/images/profile.png";
+import { Link, TextField } from "@mui/material";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
-import Socialicons from "../components/SocialIcon.jsx";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
