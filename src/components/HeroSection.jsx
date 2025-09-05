@@ -15,7 +15,7 @@ const Details = {
   description:
     "I am a Front-End Web Developer with 1+ year of experience in React.js and Tailwind CSS, creating modern, responsive, and high-performance websites. I also freelance on WordPress and Shopify, building custom websites and e-commerce stores. With creativity and technical skills, I deliver clean, user-friendly, and impactful digital experiences.",
   ResumeButton: "Resume",
-  ResumeLink: "/public/SubhanAhmed.pdf",
+  ResumeLink: "",
 };
 
 export default function HeroSection() {
@@ -92,7 +92,11 @@ export default function HeroSection() {
 
             {/* Personal Information with stagger */}
             <motion.div
-              onClick={() => window.open(Details.ResumeLink, "_blank")}
+              onClick={
+                Details.ResumeLink
+                  ? () => window.open(Details.ResumeLink, "_blank")
+                  : undefined
+              }
               className="mb-6 space-y-3 md:space-y-4 md:mb-8"
               initial="hidden"
               whileInView="visible"

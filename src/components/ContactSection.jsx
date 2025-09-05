@@ -26,6 +26,14 @@ export default function ContactSection() {
     SubmitBtnText: "Send",
   };
 
+  // Handle form submission
+  // 👉 Here you can add your backend integration, email service (like EmailJS / Nodemailer)
+  // or API call to send the form data.
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", { name, email, message });
+  };
+
   const form = useRef();
 
   const scrollToSection = (sectionId) => {
@@ -187,7 +195,11 @@ export default function ContactSection() {
                 }}
               />
 
-              <button className="relative inline-block p-0 bg-transparent border-0 cursor-pointer font-inherit group">
+              <button
+                type="button"
+                onClick={handleSubmit}
+                className="relative inline-block p-0 bg-transparent border-0 cursor-pointer font-inherit group"
+              >
                 {/* Circle */}
                 <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
                   {/* Arrow line */}

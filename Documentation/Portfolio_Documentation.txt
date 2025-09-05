@@ -85,13 +85,27 @@ portfolio/
 - PortfolioSlider.jsx → Mobile slider projects (same data as portfolio).
 - ResumeSection.jsx → Replace resume link/file (public/JohnDoe.pdf).
 - EducationSection.jsx → Update your degree, institution, and duration.
-- ContactSection.jsx → Replace email, phone, location, and form settings.
+- ContactSection.jsx → Replace email, phone, location, and form settings.On line no. 32, you can add anything you want inside the "send" function.you can integrate backend, email service (EmailJS / Nodemailer), 
+    
 
 ------------------------------------------------------------
 
 🛠️ Extra Setup (Favicon & Google Font)
 - Favicon: Replace the favicon file at  
-  `src/assets/images/boy.png` with your own image.  
+  `src/assets/images/boy.png` ------ with your own image.  
   The reference is added in `index.html`:
   ```html
   <link rel="icon" type="image/svg+xml" href="./src/assets/images/boy.png" />
+
+- Google Font (Sora):
+Already linked in index.html
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap" rel="stylesheet" />
+In tailwind.config.js, the font is configured:
+theme: {
+  extend: {
+    fontFamily: {
+      sans: ["Sora", "sans-serif"],
+    },
+  },
+},
+

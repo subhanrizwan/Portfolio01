@@ -18,7 +18,11 @@ function PortfolioCard({ item }) {
           <div key={item.id} className="space-x-3">
             <Tooltip title="Source Code">
               <IconButton
-                onClick={() => window.open(item.git)}
+                onClick={
+                  item.gitLink
+                    ? () => window.open(item.gitLink)
+                    : undefined
+                }
                 className="!bg-yellow-300 !text-black"
               >
                 {item.githubIcon}
@@ -27,7 +31,11 @@ function PortfolioCard({ item }) {
             </Tooltip>
             <Tooltip title="View Demo">
               <IconButton
-                onClick={() => window.open(item.demo)}
+                onClick={
+                  item.demoLink
+                    ? () => window.open(item.demoLink)
+                    : undefined
+                }
                 className="!bg-yellow-300 !text-black"
               >
                 {item.demoIcon}
