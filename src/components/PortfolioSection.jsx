@@ -1,4 +1,3 @@
-;
 import PortfolioSlider from "./PortfolioSlider";
 import proj1 from "../assets/images/proj1.png";
 import proj2 from "../assets/images/proj2.png";
@@ -7,6 +6,8 @@ import proj4 from "../assets/images/proj4.png";
 import proj5 from "../assets/images/proj5.png";
 import proj6 from "../assets/images/proj6.png";
 import PortfolioCard from "./PortfolioCard";
+import { IoMdEye } from "react-icons/io";
+import { FaCode } from "react-icons/fa";
 import { motion } from "framer-motion";
 import Heading from "./Heading";
 
@@ -14,58 +15,69 @@ import Heading from "./Heading";
 const portfolioData = [
   {
     id: 1,
-    title: "Project 1",
     image: proj1,
+    title: "Project 1",
     demo: "https://demo1.com",
     git: "https://github.com/demo1",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
   {
     id: 2,
-    title: "Project 2",
     image: proj2,
+    title: "Project 2",
     demo: "https://demo2.com",
     git: "https://github.com/demo2",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
   {
     id: 3,
-    title: "Project 3",
     image: proj3,
+    title: "Project 3",
     demo: "https://demo3.com",
     git: "https://github.com/demo3",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
   {
     id: 4,
-    title: "Project 4",
     image: proj4,
+    title: "Project 4",
     demo: "https://demo4.com",
     git: "https://github.com/demo4",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
   {
     id: 5,
-    title: "Project 5",
     image: proj5,
+    title: "Project 5",
     demo: "https://demo5.com",
     git: "https://github.com/demo5",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
   {
     id: 6,
-    title: "Project 6",
     image: proj6,
+    title: "Project 6",
     demo: "https://demo6.com",
     git: "https://github.com/demo6",
+    githubIcon: <FaCode fontSize={"medium"} />,
+    demoIcon: <IoMdEye fontSize={"medium"} />,
   },
 ];
 
 export default function PortfolioSection() {
-
   return (
     <motion.section
       id="portfolio"
       className="px-6 py-12 md:py-20 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
-      initial={{ opacity: 0, y: 100 }}      
+      initial={{ opacity: 0, y: 100 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
-      viewport={{ once: false }}  
+      viewport={{ once: false }}
     >
       <div className="mx-auto max-w-7xl">
         {/* Heading */}
@@ -111,4 +123,3 @@ export default function PortfolioSection() {
     </motion.section>
   );
 }
-

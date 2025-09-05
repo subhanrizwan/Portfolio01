@@ -23,7 +23,6 @@ const resumeData = [
   },
 ];
 export default function ResumeSection() {
-
   // animation variants
   const fadeInUp = {
     hidden: { opacity: 0, y: 50 },

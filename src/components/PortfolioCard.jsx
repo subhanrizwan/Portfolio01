@@ -1,6 +1,5 @@
 import { IconButton, Tooltip } from "@mui/material";
-import { IoMdEye } from "react-icons/io";
-import { FaCode } from "react-icons/fa";
+
 
 function PortfolioCard({ item }) {
   return (
@@ -23,7 +22,8 @@ function PortfolioCard({ item }) {
                 onClick={() => window.open(item.git)}
                 className="!bg-yellow-300 !text-black"
               >
-                <FaCode fontSize={"medium"} />
+                {item.githubIcon}
+                {/* <FaCode fontSize={"medium"} /> */}
               </IconButton>
             </Tooltip>
             <Tooltip title="View Demo">
@@ -31,7 +31,8 @@ function PortfolioCard({ item }) {
                 onClick={() => window.open(item.demo)}
                 className="!bg-yellow-300 !text-black"
               >
-                <IoMdEye fontSize={"medium"} />
+                {item.demoIcon}
+                {/* <IoMdEye fontSize={"medium"} /> */}
               </IconButton>
             </Tooltip>
           </div>

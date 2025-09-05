@@ -1,28 +1,33 @@
-import { Link } from "@mui/material";
+import { Link, IconButton } from "@mui/material";
 import { IoLogoGithub } from "react-icons/io";
 import { IoLogoLinkedin } from "react-icons/io";
 import { LuMails } from "react-icons/lu";
-import { IconButton } from "@mui/material";
 
 // Customize your social media links
 const SocialIconDetails = [
   {
-    icon: <IoLogoGithub className="text-[1.2rem] text-black group-hover:text-secondary" />,
+    icon: (
+      <IoLogoGithub className="text-[1.2rem] text-black group-hover:text-secondary" />
+    ),
     link: "https://github.com",
   },
   {
-    icon: <IoLogoLinkedin className="text-[1.2rem] text-black group-hover:text-secondary" />,
+    icon: (
+      <IoLogoLinkedin className="text-[1.2rem] text-black group-hover:text-secondary" />
+    ),
     link: "https://www.linkedin.com",
   },
   {
-    icon: <LuMails className="text-[1.2rem] text-black group-hover:text-secondary" />,
+    icon: (
+      <LuMails className="text-[1.2rem] text-black group-hover:text-secondary" />
+    ),
     link: "mailto:example@gmail.com",
   },
 ];
 
 function Socialicons() {
   return (
-    <div className="social-icons flex space-x-6">
+    <div className="flex space-x-6 social-icons">
       {SocialIconDetails.map((item, index) => (
         <IconButton
           key={index}
@@ -38,5 +43,3 @@ function Socialicons() {
 }
 
 export default Socialicons;
-
-

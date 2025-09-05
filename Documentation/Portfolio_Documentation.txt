@@ -1,0 +1,94 @@
+Documentation
+
+📌 Overview
+This is a personal portfolio website built with React.js and Tailwind CSS.
+It is designed as a modern, responsive, and user-friendly landing page to showcase
+projects, resume details, and contact information.
+
+The project is fully responsive and includes animations, interactive sections,
+and a clean design. Deployed on Netlify, it works smoothly on both desktop and mobile devices.
+
+------------------------------------------------------------
+
+🚀 Tech Stack
+- Frontend: React.js
+- Styling: Tailwind CSS
+- Icons: React Icons
+- UI Components: Material-UI (MUI)
+- Animations: Framer Motion
+- Slider/Carousel: Swiper.js
+- Routing: React Router DOM
+
+------------------------------------------------------------
+
+📂 Folder Structure
+portfolio/
+│── Documentation/        # Project documentation files (PDF/TXT)
+│── node_modules/         # Dependencies
+│── public/
+│   └── JohnDoe.pdf       # Resume file
+│── src/
+│   ├── assets/
+│   │   └── images/       # Images used in project
+│   ├── components/       # Reusable components
+│   │   ├── Services.jsx
+│   │   ├── ContactSection.jsx
+│   │   ├── EducationSection.jsx
+│   │   ├── Heading.jsx
+│   │   ├── HeroSection.jsx
+│   │   ├── Navigation.jsx
+│   │   ├── PortfolioCard.jsx
+│   │   ├── PortfolioSection.jsx
+│   │   ├── PortfolioSlider.jsx
+│   │   ├── Rectangle.jsx
+│   │   ├── ResumeSection.jsx
+│   │   ├── SkillsSection.jsx
+│   │   └── SocialIcon.jsx
+│   ├── App.jsx           # Main app component
+│   ├── index.css         # Tailwind + custom CSS
+│   ├── main.jsx          # Entry point
+│   └── style.css         # Additional styles
+│── package.json          # Dependencies & scripts
+
+------------------------------------------------------------
+
+⚙️ Installation & Setup
+1. Download & Extract the project files.
+2. Open the project folder in your code editor (e.g., VS Code).
+3. Install dependencies: npm install
+4. Run the development server: npm run dev
+   Open http://localhost:5173 in your browser.
+5. Build for production: npm run build
+6. Deploy: Upload the generated dist/ folder to Netlify (or connect GitHub repo directly).
+
+------------------------------------------------------------
+
+🔗 Deployment
+- Hosting Platform: Netlify
+- Build Command: npm run build
+- Publish Directory: dist
+
+------------------------------------------------------------
+
+📖 Notes
+- Icons are from react-icons instead of Material-UI icons for lightweight bundle size.
+- Animations are smooth and optimized for scroll.
+- Slider is enabled only on mobile devices for better UX.
+
+------------------------------------------------------------
+
+📝 Content Replacement Guide (For Buyers)
+- HeroSection.jsx → Replace name, title, intro text, and hero image.
+- Services.jsx → Replace service titles, descriptions, and icons.
+- SkillsSection.jsx → Add/remove skills, update skill names.
+- PortfolioSection.jsx / PortfolioCard.jsx → Replace project images, titles, and demo links.
+- PortfolioSlider.jsx → Mobile slider projects (same data as portfolio).
+- ResumeSection.jsx → Replace resume link/file (public/JohnDoe.pdf).
+- EducationSection.jsx → Update your degree, institution, and duration.
+- ContactSection.jsx → Replace email, phone, location, and form settings.
+
+------------------------------------------------------------
+
+👤 Author
+Subhan Ahmed
+📧 developersubhanahmed@gmail.com

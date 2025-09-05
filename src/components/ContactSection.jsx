@@ -1,16 +1,13 @@
-;
-import { Phone, Email, LocationOn } from "@mui/icons-material";
-import { IoLogoWhatsapp } from "react-icons/io";
-import { Link, TextField, Button } from "@mui/material";
-import Socialicons from "../components/SocialIcon.jsx";
+import { FaPhone, FaEnvelope, FaMapMarkerAlt } from "react-icons/fa";
+import { Link, TextField } from "@mui/material";
 import Image from "../assets/images/profile.png";
 import { useRef, useState } from "react";
 import { motion } from "framer-motion";
+import Socialicons from "../components/SocialIcon.jsx";
 
 export default function ContactSection() {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
 
   // Customize your contact details
@@ -18,11 +15,11 @@ export default function ContactSection() {
     ProfileImage: Image,
     Profiletitle: "Write me",
     ProfileSubtitle: "Let's discuss your next project",
-    WhatsappIcon: <Phone className="text-yellow-300 text-2xl" />,
+    WhatsappIcon: <FaPhone className="text-yellow-300 text-1xl" />,
     whatsapp: "+00 123 4567890",
-    EmailIcon: <Email className="text-yellow-300 text-2xl" />,
+    EmailIcon: <FaEnvelope className="text-yellow-300 text-1xl" />,
     email: "example@email.com",
-    LocationIcon: <LocationOn className="text-yellow-300 text-2xl" />,
+    LocationIcon: <FaMapMarkerAlt className="text-yellow-300 " />,
     address: "Your City, Country",
     Follow: "Follow us",
     FormHeading: "Or fill this form",
@@ -51,25 +48,25 @@ export default function ContactSection() {
   return (
     <section
       id="contact"
-      className="relative py-12 md:py-20 px-6 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
+      className="relative px-6 py-12 md:py-20 md:px-12 lg:px-24 bg-gradient-to-b from-black via-yellow-500/10 to-black"
     >
       {/* Decorative circles */}
       <div
-        className="absolute top-10 left-4 w-20 h-20 bg-yellow-400/30 rounded-full opacity-60 animate-bounce"
+        className="absolute w-20 h-20 rounded-full top-10 left-4 bg-yellow-400/30 opacity-60 animate-bounce"
         style={{ animationDuration: "3s" }}
       />
       <div
-        className="absolute bottom-10 right-4 w-16 h-16 bg-yellow-300/40 rounded-full opacity-60 animate-bounce delay-1000"
+        className="absolute w-16 h-16 delay-1000 rounded-full bottom-10 right-4 bg-yellow-300/40 opacity-60 animate-bounce"
         style={{ animationDuration: "3s" }}
       />
       <div
-        className="absolute top-1/2 left-2 w-12 h-12 bg-yellow-500/20 rounded-full opacity-50 animate-bounce"
+        className="absolute w-12 h-12 rounded-full opacity-50 top-1/2 left-2 bg-yellow-500/20 animate-bounce"
         style={{ animationDuration: "4s" }}
       />
-      <div className="absolute top-1/4 right-2 w-8 h-8 bg-yellow-400/25 rounded-full opacity-40 animate-pulse delay-500" />
+      <div className="absolute w-8 h-8 delay-500 rounded-full top-1/4 right-2 bg-yellow-400/25 opacity-40 animate-pulse" />
 
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
+      <div className="mx-auto max-w-7xl">
+        <div className="grid grid-cols-1 gap-16 lg:grid-cols-2">
           {/* Left Info */}
           <motion.div
             variants={fadeInUp}
@@ -77,40 +74,40 @@ export default function ContactSection() {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <div className="flex items-center gap-x-6 mb-8">
-              <div className="w-24 h-24 bg-yellow-300 rounded-full flex justify-center items-center overflow-hidden">
+            <div className="flex items-center mb-8 gap-x-6">
+              <div className="flex items-center justify-center w-24 h-24 overflow-hidden bg-yellow-300 rounded-full">
                 <img src={Details.ProfileImage} alt="John Doe" />
               </div>
               <div>
-                <h2 className="text-2xl font-bold mb-0">
+                <h2 className="mb-0 text-2xl font-bold">
                   {Details.Profiletitle}
                 </h2>
-                <h2 className="text-lg font-bold mb-0">
+                <h2 className="mb-0 text-lg font-bold">
                   {Details.ProfileSubtitle}
                 </h2>
               </div>
             </div>
 
-            <div className="space-y-3 mb-8">
+            <div className="mb-8 space-y-3">
               <div className="flex items-center gap-3">
                 {Details.WhatsappIcon}
-                <span className="text-gray-300 text-sm">
+                <span className="text-sm text-gray-300">
                   {Details.whatsapp}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 {Details.EmailIcon}
-                <span className="text-gray-300 text-sm break-all">
+                <span className="text-sm text-gray-300 break-all">
                   {Details.email}
                 </span>
               </div>
               <div className="flex items-center gap-3">
                 {Details.LocationIcon}
-                <span className="text-gray-300 text-sm">{Details.address}</span>
+                <span className="text-sm text-gray-300">{Details.address}</span>
               </div>
             </div>
 
-            <h3 className="text-2xl font-bold mb-8">{Details.Follow}</h3>
+            <h3 className="mb-8 text-2xl font-bold">{Details.Follow}</h3>
             <Socialicons />
           </motion.div>
 
@@ -121,7 +118,7 @@ export default function ContactSection() {
             whileInView="visible"
             viewport={{ once: false, amount: 0.3 }}
           >
-            <h2 className="text-2xl font-bold mb-8">{Details.FormHeading}</h2>
+            <h2 className="mb-8 text-2xl font-bold">{Details.FormHeading}</h2>
             <form ref={form} className="space-y-8">
               <TextField
                 label="Name"
@@ -190,23 +187,11 @@ export default function ContactSection() {
                 }}
               />
 
-              {/* <Button
-                type="submit"
-                className="gap-x-2 !px-8 !py-3"
-                sx={{
-                  backgroundColor: "#facc15",
-                  color: "black",
-                  borderRadius: "50px",
-                  "&:hover": { backgroundColor: "#fff" },
-                }}
-              >
-                Send <IoIosSend fontSize="large" />
-              </Button> */}
-              <button className="relative inline-block cursor-pointer border-0 bg-transparent p-0 font-inherit group">
+              <button className="relative inline-block p-0 bg-transparent border-0 cursor-pointer font-inherit group">
                 {/* Circle */}
                 <span className="relative block h-12 w-12 rounded-full bg-yellow-300 transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:w-48">
                   {/* Arrow line */}
-                  <span className="absolute left-3.5 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
+                  <span className="absolute left-3 top-1/2 -translate-y-[55%] h-0.5 w-4 bg-transparent transition-all duration-500 ease-[cubic-bezier(0.65,0,0.076,1)] group-hover:translate-x-4 group-hover:bg-black">
                     {/* Arrow head */}
                     <span className="absolute right-0 -top-[0.25rem] block h-2.5 w-2.5 rotate-45 border-t-2 border-r-2 border-black"></span>
                   </span>
@@ -223,19 +208,19 @@ export default function ContactSection() {
 
         {/* Footer */}
         <motion.div
-          className="mt-16 pt-8 border-t border-gray-800"
+          className="pt-8 mt-16 border-t border-gray-800"
           variants={fadeInUp}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
         >
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="text-gray-400 mb-4 md:mb-0">
+          <div className="flex flex-col items-center justify-between md:flex-row">
+            <div className="mb-4 text-gray-400 md:mb-0">
               © {new Date().getFullYear()}{" "}
               <span className="font-semibold">John Doe</span> — All rights
               reserved.
             </div>
-            <p className="flex gap-x-3 cursor-pointer">
+            <p className="flex cursor-pointer gap-x-3">
               {["Home", "About", "Skills", "Portfolio", "Contact"].map(
                 (data) => (
                   <Link

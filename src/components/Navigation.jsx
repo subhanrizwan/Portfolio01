@@ -14,11 +14,11 @@ export default function Navigation() {
 
   return (
     <nav className="fixed top-0 right-0 z-50 p-6 md:p-10">
-      <button className="w-12 h-12 bg-yellow-400 rounded-full flex items-center justify-center hover:bg-yellow-300 transition-colors">
-        <label className="flex flex-col gap-2 w-8">
+      <button className="flex items-center justify-center w-12 h-12 transition-colors bg-yellow-400 rounded-full hover:bg-yellow-300">
+        <label className="flex flex-col w-8 gap-2">
           <input
             type="checkbox"
-            className="peer hidden"
+            className="hidden peer"
             checked={mobileMenuOpen}
             onChange={() => setMobileMenuOpen(!mobileMenuOpen)}
           />
@@ -29,9 +29,9 @@ export default function Navigation() {
       </button>
 
       {mobileMenuOpen && (
-        <div className="fixed inset-0 bg-black/90 flex items-center justify-center -z-40">
-          <div className="text-center space-y-8">
-            {["Home", "About", "Skills", "Portfolio", "Contact"].map((item) => (
+        <div className="fixed inset-0 flex items-center justify-center bg-black/90 -z-40">
+          <div className="space-y-8 text-center">
+            {["Home", "Services", "Skills", "Portfolio", "Contact"].map((item) => (
               <button
                 key={item}
                 onClick={() => scrollToSection(item.toLowerCase())}
